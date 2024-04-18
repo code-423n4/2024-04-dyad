@@ -230,8 +230,6 @@ To run gas benchmarks
 ```bash
 forge test --gas-report
 ```
-![Screenshot from 2024-04-18 17-44-08](https://github-production-user-asset-6210df.s3.amazonaws.com/65364747/323652199-b1a7d959-8c73-49da-9a31-270fdcea1d06.png)
-![Screenshot from 2024-04-18 17-44-08](https://github-production-user-asset-6210df.s3.amazonaws.com/65364747/323652199-b1a7d959-8c73-49da-9a31-270fdcea1d06.png?raw=true)
 
 ![Screenshot from 2024-04-18 17-44-08](https://github.com/code-423n4/2024-04-dyad/assets/65364747/b1a7d959-8c73-49da-9a31-270fdcea1d06)
 ![Screenshot from 2024-04-18 17-45-57](https://github.com/code-423n4/2024-04-dyad/assets/65364747/14c19365-51a9-4cf0-b774-1cdfae65b865)
