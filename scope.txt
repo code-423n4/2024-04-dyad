@@ -1,0 +1,7 @@
+./src/core/VaultManagerV2.sol
+./src/core/Vault.kerosine.bounded.sol
+./src/core/Vault.kerosine.sol
+./src/core/Vault.kerosine.unbounded.sol
+./src/core/KerosineManager.sol
+./script/deploy/Deploy.V2.s.sol
+./src/staking/KerosineDenominator.sol
