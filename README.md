@@ -141,7 +141,7 @@ The whole migration is described in `Deploy.V2.s.sol`. The only transaction that
 | Question                                | Answer                       |
 | --------------------------------------- | ---------------------------- |
 | ERC20 used by the protocol              |       Kerosene             |
-| Test coverage                           | 38.46%                        |
+| Test coverage                           | 33.64%                        |
 | ERC721 used  by the protocol            |            DNFT             |
 | ERC777 used by the protocol             |           None                |
 | ERC1155 used by the protocol            |              None            |
@@ -230,11 +230,11 @@ To run gas benchmarks
 ```bash
 forge test --gas-report
 ```
-![Screenshot from 2024-04-16 10-51-50](https://github.com/code-423n4/2024-04-dyad/assets/65364747/dd75faa3-6423-491a-9be8-1cabadf2e0db)
-![Screenshot from 2024-04-16 10-52-24](https://github.com/code-423n4/2024-04-dyad/assets/65364747/238630fc-3f93-43b9-acfb-ec4b4d74b7f9)
-![Screenshot from 2024-04-16 10-52-46](https://github.com/code-423n4/2024-04-dyad/assets/65364747/fb636402-abe5-4eb9-aca6-922d568c8a01)
-![Screenshot from 2024-04-16 10-53-13](https://github.com/code-423n4/2024-04-dyad/assets/65364747/0e5c0523-dc02-48d6-98a0-a77711930c99)
-![Screenshot from 2024-04-16 11-09-55](https://github.com/code-423n4/2024-04-dyad/assets/65364747/a5fee8ff-6402-43e1-995f-71f4c9549d5c)
+![Screenshot from 2024-04-18 17-44-08](https://github.com/code-423n4/2024-04-dyad/assets/65364747/b1a7d959-8c73-49da-9a31-270fdcea1d06)
+![Screenshot from 2024-04-18 17-45-57](https://github.com/code-423n4/2024-04-dyad/assets/65364747/14c19365-51a9-4cf0-b774-1cdfae65b865)
+![Screenshot from 2024-04-18 17-46-17](https://github.com/code-423n4/2024-04-dyad/assets/65364747/feabd072-364f-495c-aa77-01cee26079e5)
+![Screenshot from 2024-04-18 17-47-42](https://github.com/code-423n4/2024-04-dyad/assets/65364747/67b78a67-ded2-4ac8-8833-1651f486a36c)
+![Screenshot from 2024-04-18 17-48-09](https://github.com/code-423n4/2024-04-dyad/assets/65364747/d3f08288-15d3-4554-9382-0e39ff945384)
 
 
 
