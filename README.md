@@ -28,7 +28,7 @@ _Note for C4 wardens: Anything included in this `Automated Findings / Publicly K
 DYAD is the first truly capital efficient decentralized stablecoin. Traditionally, two costs make stablecoins inefficient: surplus collateral and DEX liquidity. DYAD minimizes both of these costs through Kerosene, a token that lowers the individual cost to mint DYAD. 
 # DYAD
 
-![dyad](https://pbs.twimg.com/profile_images/1715367809843175424/LCqtLCJn_400x400.jpg)
+![dyad](https://pbs.twimg.com/profile_images/1715367809843175424/LCqtLCJn_400x400.jpg)?raw=true
 
 ## Contracts
 
