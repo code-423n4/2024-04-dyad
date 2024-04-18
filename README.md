@@ -28,7 +28,7 @@ _Note for C4 wardens: Anything included in this `Automated Findings / Publicly K
 DYAD is the first truly capital efficient decentralized stablecoin. Traditionally, two costs make stablecoins inefficient: surplus collateral and DEX liquidity. DYAD minimizes both of these costs through Kerosene, a token that lowers the individual cost to mint DYAD. 
 # DYAD
 
-![dyad](https://pbs.twimg.com/profile_images/1715367809843175424/LCqtLCJn_400x400.jpg)
+![dyad](https://github.com/code-423n4/2024-04-dyad/blob/main/dyadlogo.jpg)
 
 ## Contracts
 
@@ -231,11 +231,11 @@ To run gas benchmarks
 forge test --gas-report
 ```
 
-![Screenshot from 2024-04-18 17-44-08](https://github.com/code-423n4/2024-04-dyad/assets/65364747/b1a7d959-8c73-49da-9a31-270fdcea1d06)
-![Screenshot from 2024-04-18 17-45-57](https://github.com/code-423n4/2024-04-dyad/assets/65364747/14c19365-51a9-4cf0-b774-1cdfae65b865)
-![Screenshot from 2024-04-18 17-46-17](https://github.com/code-423n4/2024-04-dyad/assets/65364747/feabd072-364f-495c-aa77-01cee26079e5)
-![Screenshot from 2024-04-18 17-47-42](https://github.com/code-423n4/2024-04-dyad/assets/65364747/67b78a67-ded2-4ac8-8833-1651f486a36c)
-![Screenshot from 2024-04-18 17-48-09](https://github.com/code-423n4/2024-04-dyad/assets/65364747/d3f08288-15d3-4554-9382-0e39ff945384)
+![Screenshot from 2024-04-18 17-44-08](https://github.com/code-423n4/2024-04-dyad/blob/main/screenshot1.png)
+![Screenshot from 2024-04-18 17-45-57](https://github.com/code-423n4/2024-04-dyad/blob/main/screenshot2.png)
+![Screenshot from 2024-04-18 17-46-17](https://github.com/code-423n4/2024-04-dyad/blob/main/screenshot3.png)
+![Screenshot from 2024-04-18 17-47-42](https://github.com/code-423n4/2024-04-dyad/blob/main/screenshot4.png)
+![Screenshot from 2024-04-18 17-48-09](https://github.com/code-423n4/2024-04-dyad/blob/main/screenshot5.png)
 
 
 
