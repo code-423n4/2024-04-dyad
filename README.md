@@ -87,13 +87,13 @@ The whole migration is described in `Deploy.V2.s.sol`. The only transaction that
 | File   | Logic Contracts | Interfaces | SLOC  | Purpose | Libraries used |
 | ------ | --------------- | ---------- | ----- | -----   | ------------ |
 | [/src/staking/KerosineDenominator.sol](https://github.com/code-423n4/2024-04-dyad/blob/main/src/staking/KerosineDenominator.sol) | 1| **** | 14 | ||
-| [/src/core/VaultManagerV2.sol](https://github.com/code-423n4/2024-04-dyad/blob/main/src/core/VaultManagerV2.sol) | 1| **** | 39 | ||
+| [/src/core/VaultManagerV2.sol](https://github.com/code-423n4/2024-04-dyad/blob/main/src/core/VaultManagerV2.sol) | 1| **** | 166 | ||
 | [/src/core/Vault.kerosine.sol](https://github.com/code-423n4/2024-04-dyad/blob/main/src/core/Vault.kerosine.sol) | 1| **** | 62 | |@solmate/src/utils/SafeTransferLib.sol<br>@solmate/src/tokens/ERC20.sol<br>@solmate/src/auth/Owned.sol|
 | [/src/core/KerosineManager.sol](https://github.com/code-423n4/2024-04-dyad/blob/main/src/core/KerosineManager.sol) | 1| **** | 34 | |@openzeppelin/contracts/utils/structs/EnumerableSet.sol<br>@solmate/src/auth/Owned.sol|
 | [/src/core/Vault.kerosine.bounded.sol](https://github.com/code-423n4/2024-04-dyad/blob/main/src/core/Vault.kerosine.bounded.sol) | 1| **** | 42 | |@solmate/src/tokens/ERC20.sol|
 | [/src/core/Vault.kerosine.unbounded.sol](https://github.com/code-423n4/2024-04-dyad/blob/main/src/core/Vault.kerosine.unbounded.sol) | 1| **** | 60 | |@solmate/src/tokens/ERC20.sol<br>@solmate/src/utils/SafeTransferLib.sol|
 | [/script/deploy/Deploy.V2.s.sol](https://github.com/code-423n4/2024-04-dyad/blob/main/script/deploy/Deploy.V2.s.sol) | 1| **** | 87 | |forge-std/Script.sol<br>@solmate/src/tokens/ERC20.sol|
-| **Totals** | **7** | **** | **338** | | |
+| **Totals** | **7** | **** | **465** | | |
 
 ### Files out of scope
 
