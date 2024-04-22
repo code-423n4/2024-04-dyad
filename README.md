@@ -140,7 +140,7 @@ The whole migration is described in `Deploy.V2.s.sol`. The only transaction that
 
 | Question                                | Answer                       |
 | --------------------------------------- | ---------------------------- |
-| ERC20 used by the protocol              |       Kerosene             |
+| ERC20 used by the protocol              |       Kerosene, weth, wseth   |
 | Test coverage                           | 33.64%                        |
 | ERC721 used  by the protocol            |            DNFT             |
 | ERC777 used by the protocol             |           None                |
