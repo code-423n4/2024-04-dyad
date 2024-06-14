@@ -1,0 +1,5700 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q2-2024 / dyad-apr18
+==============================================================
+
+[04/17/2024 21:50] kartoonjoy (pinned)
+👋 Hello and welcome to the audit channel for the **$36,500 DYAD audit**!
+
+📆 Audit opens 04/18/2024 20:00 (20:00 UTC) and runs through 04/25/2024 20:00 (20:00 UTC) (7 days).
+
+Please give a warm welcome to the DYAD team, particularly @Joey Roth, @shafu, @ehjc and @Max, who will be available for questions either here in the channel or via a **PRIVATE** thread in the PDT and UTC+8 timezone(s). 
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/audits/2024-04-dyad
+
+{Reactions}
+dyad (16) kerosene (5) 🙏 (3) 
+
+[04/17/2024 21:51] kartoonjoy
+Pinned a message.
+
+
+[04/18/2024 16:05] smith3dx
+lets have a good one
+
+{Reactions}
+🙏 (4) 🫡 (5) dyad (3) 
+
+[04/18/2024 20:02] C4 (pinned)
+**Automated Findings / Publicly Known Issues**
+
+Reminder: all [Automated Findings / Publicly Known Issues](https://github.com/code-423n4/2024-04-dyad#automated-findings--publicly-known-issues) are out of scope and ineligible for awards.
+
+{Embed}
+https://github.com/code-423n4/2024-04-dyad
+GitHub - code-423n4/2024-04-dyad
+Contribute to code-423n4/2024-04-dyad development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/81c04556-634a-451d-b2a0-c3e2a12ae184-870A7
+
+{Reactions}
+dyad 
+
+[04/18/2024 20:02] thebrittfactor
+Pinned a message.
+
+
+[04/18/2024 20:03] ljj
+Good luck all
+
+
+[04/18/2024 20:03] joeyroth
+gm everyone, I’m the founder of DYAD, @shafu is the lead dev, and @ehjc and @Max are here from the team as well to help answer any questions
+
+{Reactions}
+❤️ (8) 
+
+[04/18/2024 20:09] _bzee.
+Welcome @ljj
+
+{Reactions}
+👋 (2) 
+
+[04/18/2024 20:12] _bzee.
+Welcome @Joey Roth good to have you here
+
+{Reactions}
+cheers 
+
+[04/18/2024 20:12] brivan
+@Joey Roth The already deployed contracts have been audited before?
+
+{Reactions}
+👍 
+
+[04/18/2024 20:20] abcdefghxxxxxxxxx
+why is  ``script/deploy/Deploy.V2.s.sol ``   in scope    +    those contracts deployed should be looked at by auditors ?
+
+
+[04/18/2024 20:25] joeyroth
+Currently deployed contracts have been audited. We’re including the deploy scripts for new contracts in the current audit scope
+
+
+[04/18/2024 20:26] abcdefghxxxxxxxxx
+so the scope is those 6 contracts from the ``scope.txt``  (  whitout the deploy script  )  to make everything clear
+
+
+[04/18/2024 20:26] abcdefghxxxxxxxxx
+``` ./src/core/VaultManagerV2.sol
+./src/core/Vault.kerosine.bounded.sol
+./src/core/Vault.kerosine.sol
+./src/core/Vault.kerosine.unbounded.sol
+./src/core/KerosineManager.sol
+./src/staking/KerosineDenominator.sol```
+
+
+[04/18/2024 20:26] abcdefghxxxxxxxxx
+only these 6  i mean
+
+
+[04/18/2024 20:34] poeaudits
+In the links section it says "Previous audits: None". Does that just mean there is no link to the previous audit or that there was no previous audit?
+
+
+[04/18/2024 20:42] tamayonft
+Are the sloc correct?
+
+
+[04/18/2024 20:42] shafu0x
+yes
+
+
+[04/18/2024 20:42] abcdefghxxxxxxxxx
+perfect
+
+
+[04/18/2024 20:42] shafu0x
+correct
+
+
+[04/18/2024 20:43] shafu0x
+we have done a solo audit on the kerosene vaults. but they have changed a little bit since then. Here is the link if you still think it is useful. https://drive.google.com/file/d/1W-a991RkoCs_p7Sxt3lP3dbpT_Xqk1Jv/view?usp=sharing
+
+{Embed}
+https://drive.google.com/file/d/1W-a991RkoCs_p7Sxt3lP3dbpT_Xqk1Jv/view?usp=sharing
+Kerosine Vaults Security Audit (3).pdf
+
+
+[04/18/2024 21:30] moeid3
+Is My question too
+
+
+[04/18/2024 22:20] mylifechangefast.eth_70767
+Quick question🙋
+
+
+[04/18/2024 22:21] mylifechangefast.eth_70767
+Uhmm.. Functions are been called(external) in a function but are out of scope what do we do to them?
+
+
+[04/18/2024 22:22] mylifechangefast.eth_70767
+@Joey Roth
+
+
+[04/19/2024 02:03] mctoady
+Btw `VaultManagerV2` is wrongly listed as 39SLOC
+
+{Reactions}
+catnod (11) 
+
+[04/19/2024 02:35] irreverent.eth
+```                                        Project SLOC      nSLOC
+/src/staking/KerosineDenominator.sol              14         14        
+/src/core/VaultManagerV2.sol                      39        166
+/src/core/Vault.kerosine.sol                      62         39
+/src/core/KerosineManager.sol                     34         24
+/src/core/Vault.kerosine.bounded.sol              42         25
+/src/core/Vault.kerosine.unbounded.sol            60         46```
+
+
+[04/19/2024 03:58] 0x11singh99
+Script in scope
+
+{Reactions}
+😂 
+
+[04/19/2024 06:48] sa3083
+is the deploy script in scope ?
+
+
+[04/19/2024 06:58] 0x77_eth
+i think so
+
+
+[04/19/2024 07:20] abcdefghxxxxxxxxx
+and what useful vulnerabilities  someone can find in that script ?
+
+{Reactions}
+4739_Skeletor 😅 
+
+[04/19/2024 07:33] 0xauditism
+@Joey Roth why do you think the `denominator()` is not a great solution ?
+https://github.com/code-423n4/2024-04-dyad/blob/031280f9f7c7bac6a5bc92a2b5d53fb9c38e6fbc/src/staking/KerosineDenominator.sol#L17-L22
+
+{Embed}
+https://github.com/code-423n4/2024-04-dyad/blob/031280f9f7c7bac6a5bc92a2b5d53fb9c38e6fbc/src/staking/KerosineDenominator.sol
+2024-04-dyad/src/staking/KerosineDenominator.sol at 031280f9f7c7bac...
+Contribute to code-423n4/2024-04-dyad development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/81c04556-634a-451d-b2a0-c3e2a12ae184-870A7
+
+{Reactions}
+🆙 (2) 
+
+[04/19/2024 07:49] 0xstalin
+you would be surprised by the number of vulnerabilities that sometimes can pop off caused by the deployment scripts 😉
+
+If the script is part of the scope, def check it out
+
+{Reactions}
+👆 (7) 
+
+[04/19/2024 07:50] sa3083
+shh,  don't give out free advice like that man.....
+
+It's not worth checking the script trust me guys 🤡 🤡
+
+{Reactions}
+😂 (2) 
+
+[04/19/2024 07:53] 0xstalin
+haha, more eyes, more dups, more rewards for the more nasty bugs on the core contracts
+It's a win win ser
+
+{Reactions}
+🤣 (5) 
+
+[04/19/2024 07:54] sa3083
+have to admit i have not think about it like that :)), deceive the enemy, art of war type of shits :))
+
+{Reactions}
+10_10 (4) 
+
+[04/19/2024 07:55] 0xstalin
+https://tenor.com/view/wink-winking-wink-wink-feeling-good-smiles-gif-15388269
+
+{Embed}
+https://tenor.com/view/wink-winking-wink-wink-feeling-good-smiles-gif-15388269
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/wink-winking-F9BE8.png
+
+
+[04/19/2024 07:57] 0xsorrynotsorry
+This is called bounty pot dillution attack 🐐
+
+{Reactions}
+😂 (18) 
+
+[04/19/2024 08:01] _3doc_
+Beware of the Discord focus attack when our eyes are here, they are not on the code :eyeses:
+
+{Reactions}
+chefskiss (5) 💯 (7) 😂 (13) 
+
+[04/19/2024 08:08] 0xarav
+Why does the inscope table say 
+vaultmanagerV2 SLOC = 39
+when the code has 250+ SLOC
+
+
+[04/19/2024 08:17] the_first_elder
+How do I create a private thread
+
+
+[04/19/2024 08:17] marioyordanov
+where is the notes nft contract
+
+
+[04/19/2024 08:19] 0xsorrynotsorry
+I´m caught red handed: https://discord.com/channels/810916927919620096/855206418301714453/1063022271645626418
+
+
+[04/19/2024 08:20] _3doc_
+my master! 🙇‍♂️
+
+{Reactions}
+🙇‍♂️ 
+
+[04/19/2024 08:20] mylifechangefast.eth_70767
+Ye shall seek and find no bugs
+
+
+[04/19/2024 08:30] 0xsorrynotsorry
+It´s the error on my side, while preparing the contest repo, I mistakenly input the wrong number.
+
+
+[04/19/2024 08:31] mylifechangefast.eth_70767
+Started a thread.
+
+
+[04/19/2024 08:34] 0xarav
+Ah i see , Np 
+just wanted to clarify 🙂
+
+{Reactions}
+🙏 
+
+[04/19/2024 08:52] infectedfuture
+I have these tests failing
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-89686.png
+
+
+[04/19/2024 08:54] infectedfuture
+do I need to follow this to solve the issue? https://github.com/code-423n4/2024-04-dyad/blob/main/README-sponsor.md
+
+
+[04/19/2024 08:54] infectedfuture
+(there's a 2nd readme)
+
+
+[04/19/2024 09:13] hoven3
+did u add an RPC?
+
+{Reactions}
+👍 
+
+[04/19/2024 09:14] infectedfuture
+added an env file with mainnet and sepolia rpc
+
+
+[04/19/2024 09:14] infectedfuture
+but running test with --rpc-url does work for some tests
+
+
+[04/19/2024 09:20] marioyordanov
+@Joey Roth what is the purpose of DNft contract
+
+
+[04/19/2024 09:24] brivan
+Mentioned on the contest README
+> DNft — "A dNFT gives you the right to mint DYAD"
+
+
+[04/19/2024 09:41] 0x11singh99
+are those findings fixed in current code
+
+
+[04/19/2024 09:44] xkeywordx
+Hello guys. Are the V2 vaults permissionless or only the protocol owner is supposed to create new vaults?
+
+
+[04/19/2024 10:08] infectedfuture
+am I missing something, or this should be C_non-K > 1.5 * (D_debt + D_mint) ?
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-B7976.png
+
+
+[04/19/2024 10:18] ehjc
+The overall minimum CR should be 150% as you said. The rule above talks about what portion of this should be exogenous collateral. This needs to be at least 100% where the rest 50% could be filled by Kerosene. Note that the deterministic value of Kerosene itself is the surplus exogenous collateral divided by the circulating Kerosene supply
+
+
+[04/19/2024 10:19] ehjc
+This means if the surplus in the system goes to zero so should the price of Kerosene. It’s not based on market prices
+
+
+[04/19/2024 10:36] brivan
+> Note that the deterministic value of Kerosene itself is the surplus exogenous collateral divided by the circulating Kerosene supply
+Speaking about this, a question arises and I believe it is already asked up in the chat. In `KerosineDenominator::denominator` you are subtracting the Kerosine's MAINNET_OWNER balance from the Kerosine's totalSupply and you mentioned it is not a great solution. Why is that?
+
+
+[04/19/2024 10:59] ehjc
+Ideally, you’d have an on-chain solution to get the circulating supply (different than balanceOf), which we use to determine the deterministic Kerosene price. However, we found so far no convincing solution for that purpose. Therefore, this approach was chosen for now, but it is upgradable.
+
+{Reactions}
+thankyou 
+
+[04/19/2024 11:10] jcfichtner
+why this content does not have a gas award?
+
+
+[04/19/2024 11:29] kartoonjoy
+Opted out of gas awards.
+
+
+[04/19/2024 11:34] vad37
+I need clarification in Deployment script. Does `boundedKerosineVault` will ever be added to vault license later?
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-83A78.png
+
+{Reactions}
+💸 
+
+[04/19/2024 11:36] vad37
+I mean  does `BoundedKerosineVault` count as valid Vault that user can add later
+
+
+[04/19/2024 11:44] infectedfuture
+oh yeah ok make sense, thanks!
+
+{Reactions}
+🙏 
+
+[04/19/2024 11:56] _karanel
+Yeah saw that. Name and symbol of token is `Kerosene`, but everywhere else in file/variable names `Kerosine` is used.
+
+
+[04/19/2024 11:58] _3doc_
+Looks like a mistake. David Ryan Harris' spelling is right 👀 https://www.youtube.com/watch?v=nJ7GenuTQR8
+
+{Reactions}
+😄 (3) ☝️ 🔥 
+
+[04/19/2024 12:15] davies_0212
+Hi, @ehjc. There can be several `VaultManagerV2`?
+
+
+[04/19/2024 12:15] davies_0212
+What about `KerosineManager`? Only one for entire protocol, or one for each `VaultManagerV2`?
+
+
+[04/19/2024 12:16] ehjc
+Should be one vault manager but @shafu will confirm
+
+
+[04/19/2024 12:16] davies_0212
+Thx.
+
+
+[04/19/2024 12:21] shafu0x
+Only one
+
+
+[04/19/2024 12:21] shafu0x
+Yes later
+
+
+[04/19/2024 12:22] davies_0212
+What about `KerosineManager`? Only one for the entire protocol?
+
+
+[04/19/2024 12:29] shafu0x
+Yes
+
+
+[04/19/2024 12:30] davies_0212
+I see. Thx.
+
+
+[04/19/2024 12:30] ehjc
+Typo tbh 😅
+
+
+[04/19/2024 12:31] ehjc
+Kerosene it is
+
+
+[04/19/2024 12:37] 0x74554
+what's the difference between the bounded and unbounded kerosene vault ?
+
+
+[04/19/2024 12:37] 0x74554
+maybe dumb question lol
+
+
+[04/19/2024 12:39] volokinn
+bounded - cannot withdraw, unbounded - free to withdraw, you can check the implementation.
+
+
+[04/19/2024 12:39] volokinn
+furthermore the assets price of bounded kerosene deposits is *2 because it is locked.
+
+
+[04/19/2024 12:41] 0x74554
+okay now it makes sense, thx ser.
+
+
+[04/19/2024 12:49] _karanel
+So there can be a maximum of 10 licensed KeroseneVaults (either bounded or unbounded), right?
+
+
+[04/19/2024 12:51] _karanel
+While there can be any number of licensed token Vaults.
+And a DNft can have 5 KeroseneVaults and 5 token Vaults.
+
+
+[04/19/2024 12:52] shafu0x
+No up to 10 vaults that are considered in the kerosene price calculation
+
+
+[04/19/2024 13:20] xkeywordx
+@shafu at the end of the day is the `script/deploy/Deploy.V2.s.sol` in scope or not for the audit?
+
+
+[04/19/2024 13:21] shafu0x
+Yes! Very important!
+
+
+[04/19/2024 13:22] xkeywordx
+Okay, thank you
+
+
+[04/19/2024 13:25] volokinn (pinned)
+Hey @kartoonjoy | C4🎇🎇 , I suggest pinning the [dyad walkthrough](https://www.youtube.com/watch?v=ok4CBaqEajM) since someone might have missed the X post.
+
+{Reactions}
+👍 (3) ❤️ (6) dyad 
+
+[04/19/2024 13:26] kartoonjoy
+Pinned a message.
+
+
+[04/19/2024 15:13] petro_1912
+@shafu @Joey Roth 
+contract DNftParameters {
+  uint public constant INSIDER_MINTS  = 4000;
+  uint public constant START_PRICE    = 0 ether; // 0.1 ether
+  uint public constant PRICE_INCREASE = 0 ether; // 0.001 ether
+}
+START_PRICE and PRICE_INCREASE will be zero during real deployment?
+
+
+[04/19/2024 15:14] petro_1912
+So any user can mint dNft without sending ether?
+
+
+[04/19/2024 15:35] ehjc
+the dNFT contract is already deployed, start price was 0.1 and price increase is 0.001
+
+{Reactions}
+👍🏼 (2) 
+
+[04/19/2024 15:35] ehjc
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-87253.png
+
+
+[04/19/2024 15:36] ehjc
+https://etherscan.io/token/0xdc400bbe0b8b79c07a962ea99a642f5819e3b712
+
+
+[04/19/2024 15:36] petro_1912
+so zero value is only for test case?
+
+
+[04/19/2024 15:37] itsabinashb
+hi @ehjc , have a doubt in private thread, could you please look into it?
+
+
+[04/19/2024 15:38] ehjc
+let me check that ser
+
+
+[04/19/2024 15:39] _0xmax
+i dont see your thread
+
+
+[04/19/2024 15:39] _0xmax
+could be me
+
+
+[04/19/2024 15:57] auditor_79099
+Hi @Max , could you please explain about this in Vault.kerosine.bounded.sol.
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-4FF69.png
+
+
+[04/19/2024 15:58] _3doc_
+have a look here -> https://www.youtube.com/watch?v=ok4CBaqEajM
+
+{Reactions}
+❤️ 
+
+[04/19/2024 16:45] mylifechangefast.eth_70767
+@shafu  the dyad token are in what contract?
+
+
+[04/19/2024 17:53] haxatron1
+my critical vuln 🫢
+
+{Reactions}
+🤪 (2) 🙈 (2) 😂 (6) 
+
+[04/19/2024 17:56] petro_1912
+Hi, @ehjc 
+`if (getNonKeroseneValue(id) - value < dyadMinted) revert NotEnoughExoCollat();`
+
+
+[04/19/2024 17:57] petro_1912
+Can you kindly explain about the above code snippet?
+
+
+[04/19/2024 17:58] brivan
+https://dyadstable.notion.site/DYAD-design-outline-v6-3fa96f99425e458abbe574f67b795145
+
+Scroll all the way down to the title `Withdrawal Check`
+
+
+[04/19/2024 18:01] petro_1912
+Thanks. I got it
+
+
+[04/19/2024 18:05] itsabinashb
+hi, @ehjc @Max  i have something in private thread, please look into it 🙂
+
+
+[04/19/2024 18:22] mladenov0603
+Are there any docs for VaultManagerV2.sol? What is supposed to do?
+
+
+[04/19/2024 18:25] itsabinashb
+read the code friend
+
+
+[04/19/2024 18:33] ivanfitro
+the only vaults are wETH and wstETH?
+
+
+[04/19/2024 18:35] mylifechangefast.eth_70767
+So the vault Manager doesn't hold any dyad?
+
+
+[04/19/2024 18:44] mylifechangefast.eth_70767
+Why are vault been removed @shafu
+
+
+[04/19/2024 19:25] shafu0x
+`core/Dyad.sol`
+
+{Reactions}
+✅ 
+
+[04/19/2024 19:31] kirkeelee
+Please check private thread.
+
+
+[04/19/2024 19:54] dinkras
+@shafu Is there a staging version of https://app.dyadstable.xyz/ with Sepolia or any Testnet  support?
+
+
+[04/19/2024 19:59] haxatron1
+This chat seems super active
+
+
+[04/19/2024 20:00] haxatron1
+Im already ready for 2k subs 😂
+
+{Reactions}
+💯 psyduck 4739_Skeletor (2) 
+
+[04/19/2024 20:18] masol_66728
+soooo.. each DNft can have MAX amount of vaults tied to it ?
+
+
+[04/19/2024 20:43] ehjc
+There is a maximum number of vaults per dNFT because of how the CR is calculated (loop)
+
+{Reactions}
+❤️ 
+
+[04/19/2024 20:44] masol_66728
+but there is only one Vault contract deployed per asset ?
+
+{Reactions}
+👍 
+
+[04/19/2024 21:17] donkicha
+When the bot-report should be shown? I think that 24 hours has passed.
+
+
+[04/19/2024 21:18] ljj
+I don't think there is bot race for this contest.
+
+{Reactions}
+👍 
+
+[04/19/2024 21:19] donkicha
+Oh, really???
+
+
+[04/19/2024 21:56] iwildsniperi
+is there max supply of dNFT?
+or its expanding?
+
+
+[04/19/2024 22:06] iwildsniperi
+please no please
+
+
+[04/19/2024 22:49] tesskimy
+I got the same test failings, is there anyone who got this
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/Screenshot_from_2024-04-20_01-48-43-E811F.png
+
+
+[04/20/2024 03:14] 0xloscar01
+Use a Mainnet RPC-URL API key
+
+
+[04/20/2024 03:15] 0xloscar01
+`forge test --rpc-url https://eth-mainnet.g.alchemy.com/v2/YOUR_API_KEY`
+
+
+[04/20/2024 04:49] zkillua.dev
+we have DYAD design outline v6 and v5,which one should we be looking at? the given url: Documentation: https://dyadstable.notion.site/DYAD-design-outline-v5-1-3fa96f99425e458abbe574f67b795145?pvs=4 points to v5 but it redirects to v6. can someone clarify?Also, what's the difference between these two? @shafu
+
+{Embed}
+https://dyadstable.notion.site/DYAD-design-outline-v5-1-3fa96f99425e458abbe574f67b795145?pvs=4
+DYAD design outline v6 | Notion
+DYAD is the first truly capital efficient decentralized stablecoin. Traditionally, two costs make stablecoins inefficient: surplus collateral and DEX liquidity. DYAD minimizes both of these costs through Kerosene, a token that lowers the individual cost to mint DYAD.
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/https%253A%252F%252Fprod-files-secure.s3.u-A16C5.jpeg
+
+
+[04/20/2024 05:36] ehjc
+No cap, minting price increases linearly
+
+
+[04/20/2024 05:37] ehjc
+Latest docs version should be fine. @Joey Roth will confirm
+
+
+[04/20/2024 05:50] zkillua.dev
+i see some differences, not sure.
+
+
+[04/20/2024 06:20] _0xmax
+V5<V6
+
+
+[04/20/2024 06:33] ehjc
+@shafu  doesn’t account for user errors in his implementation
+
+{Reactions}
+👍🏼 
+
+[04/20/2024 06:43] infectedfuture
+you would be better discussing that topic in a private thread imo (and deleting your leads) 😂
+
+
+[04/20/2024 06:44] ehjc
+Yes spin up a private and ask the dev directly ser
+
+
+[04/20/2024 06:44] 0xabhay.
+yes  but i think it will help others also so no problem
+
+
+[04/20/2024 06:44] infectedfuture
+yeah sure give us free issues we will not complain 👀
+
+{Reactions}
+🙏 (2) 
+
+[04/20/2024 06:45] 0xabhay.
+they don't reply i am tired of asking why i asked here
+
+
+[04/20/2024 06:46] ehjc
+Could you tag me in there?
+
+
+[04/20/2024 06:46] 0xabhay.
+i already tagged you sir
+
+
+[04/20/2024 06:48] ehjc
+Yes, it’s just hard to find your private channel since there are quite a lot and naming of those channels is often the same
+
+
+[04/20/2024 06:49] 0xabhay.
+name  - questions
+
+
+[04/20/2024 06:49] ehjc
+Ok this brings me down to three thanks
+
+
+[04/20/2024 06:58] ehjc
+Naming conventions for private channels would be great 👀
+
+
+[04/20/2024 07:02] arkan2245
+I put it in #📥・suggestion-box for you
+
+{Reactions}
+❤️ 
+
+[04/20/2024 07:17] .justuzair
+just starting out with the audit 
+
+Can some one explain what is the difference between vaults and kerosene vaults?
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-8930C.png
+
+
+[04/20/2024 07:19] _0xmax
+vaults are for exogenous collateral
+kerosene vaults are for kerosene, the token, endogenous to the protocol
+
+
+[04/20/2024 07:22] mladenov0603
+Is there any restriction who can add/remove vaults or anyone can create vaults
+
+
+[04/20/2024 07:25] _0xmax
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-C6A20.png
+
+{Reactions}
+🙂 
+
+[04/20/2024 07:26] .justuzair
+thanks got it
+
+
+[04/20/2024 07:45] volokinn
+check pinned messages there is a code walkthrough video by the dev.
+
+
+[04/20/2024 07:46] _0xmax (pinned)
+let me just drop it here again: https://www.youtube.com/watch?v=ok4CBaqEajM
+
+{Embed}
+shafu
+https://www.youtube.com/watch?v=ok4CBaqEajM
+DYAD V2 - Kerosene - Code4rena Audit
+DYAD is the first truly capital efficient decentralized stablecoin. Traditionally, two costs make stablecoins inefficient: surplus collateral and DEX liquidity. DYAD minimizes both of these costs through Kerosene, a token that lowers the individual cost to mint DYAD.
+
+https://dyadstable.notion.site/DYAD-design-outline-v6-3fa96f99425e458abbe574f6...
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/maxresdefault-0437D.jpg
+
+
+[04/20/2024 07:55] mladenov0603
+@Max  can you please check private thread
+
+
+[04/20/2024 08:21] kuprumion
+Just out of curiosity... How is that possible? Looks like the conflicts during the judging phase are preprogrammed... _and_ the judging is probably going to last 2-3 months...
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-16B3D.png
+
+
+[04/20/2024 08:30] infectedfuture
+what is the issue?
+
+
+[04/20/2024 08:33] kuprumion
+File explicitly in scope (VaultManagerV2.sol) imports and heavily depends on files explicitly out of scope (DNft.sol, Dyad.sol, Licenser.sol, Vault.sol). You can't reasonably audit the former without the latter.
+
+
+[04/20/2024 08:35] infectedfuture
+I was going to say something, then I see this 🫠
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-9800F.png
+
+{Reactions}
+👀 (2) 😂 
+
+[04/20/2024 08:38] haxatron1
+I think the judge is montioring this channel
+
+{Reactions}
+😂 
+
+[04/20/2024 08:38] _3doc_
+I see this applies more to the case i.e. you can demonstrate an impact in a contract due to a fault in the out of scope library ie you have a math library that is out of scope
+
+{Reactions}
+👍 
+
+[04/20/2024 08:38] haxatron1
+Are u the judge
+
+
+[04/20/2024 08:40] _3doc_
+Nope. And I am suggesting this against my interest as a competitor because I would really benefit from people auditing Chainlink or even Uniswap instead of the contracts in scope
+
+
+[04/20/2024 08:41] infectedfuture
+I see what you mean and this make sense, still the doc isn't that precise about it 😅  but this is more a discussion to have in another channel I suppose
+
+
+[04/20/2024 08:41] haxatron1
+Interesting but I believe there have been cases where the judge doesnt follow this rule
+
+
+[04/20/2024 08:44] haxatron1
+It actually really depends on the argumentation in the PJQA phase on whether root cause OOS, impact in scope gets accepted or not.
+
+
+[04/20/2024 08:46] 0x11singh99
+This is going to be very dense contest
+
+{Reactions}
+💯 (2) 🥵 
+
+[04/20/2024 08:58] kartoonjoy
+Pinned a message.
+
+
+[04/20/2024 09:26] balenciaga_77
+how can we win the air drop ?
+
+
+[04/20/2024 09:27] devpelz
+Hello guys, um please Is kerosene the only token that can be used as collateral?
+
+
+[04/20/2024 09:36] bbl4de.xyz
+No, https://discord.com/channels/810916927919620096/1229440078280130634/1231142188990206046
+Please guys, before asking questions read this channel from the beginning it will take you a few minutes and most basic questions were already answered
+
+{Reactions}
+👆 thankyou 
+
+[04/20/2024 09:45] _0xmax
+no sir any erc20 can technically be used as collateral
+
+
+[04/20/2024 09:46] devpelz
+okay got it, thanks
+
+
+[04/20/2024 09:55] zkillua.dev
+yes, files  out of scope are imported in multiple places and these imports are the core, i still don't understand why they are left out.
+
+{Reactions}
+💯 (2) 
+
+[04/20/2024 10:04] devpelz
+exactly, what are we to do, if the issues we find are connected to the external calls are we to report them or let it be? idk
+
+
+[04/20/2024 10:06] mylifechangefast.eth_70767
+Can they be😅
+
+
+[04/20/2024 10:18] jvorex
+don’t let ‘em be. just send em my way so I can help make sense of it fren
+
+{Reactions}
+4739_Skeletor 
+
+[04/20/2024 10:19] devpelz
+gotcha 😅👍🏾
+
+
+[04/20/2024 10:24] brivan
+Most of the questions here can be answered by the wardens themselves if people spend some time reading the docs or going through the code
+
+{Reactions}
+10_10 (2) 
+
+[04/20/2024 10:32] haxatron1
+😂
+
+
+[04/20/2024 11:13] plamkata
+@Max is the licenser a trusted party? What is the criteria for a vault to get licensed so it can be added to the manager?
+
+
+[04/20/2024 11:18] _0xmax
+msig for now
+
+
+[04/20/2024 11:18] _0xmax
+at some point in the future we will implement a voting mechanism (hold a note/dnft = vote)
+
+
+[04/20/2024 11:36] plamkata
+Ok, another question quickly. I did not find on which chain is the deployment going to be on?
+
+
+[04/20/2024 11:36] plamkata
+Sorry if I missed this somewhere
+
+
+[04/20/2024 11:37] aamirusmani1552
+Mainnet
+
+
+[04/20/2024 11:37] aamirusmani1552
+I think
+
+
+[04/20/2024 11:38] aamirusmani1552
+https://code4rena.com/audits/2024-04-dyad#top:~:text=Chains%20the%20protocol,Ethereum
+yup
+
+
+[04/20/2024 11:38] plamkata
+ty
+
+
+[04/20/2024 11:58] m_rassska
+W for vim <З
+
+
+[04/20/2024 12:12] arkan2245
+Petition to add DNft.sol, Dyad.sol, Licenser.sol and Vault.sol to the scope
+
+It'll benefit the wardens, the sponsor will get more bang for their buck and there'll be less dupes for the judge to deal with
+
+This won't compromise the coverage on the existing scope since there's clearly a ton of wardens working on this
+
+{Reactions}
+👍🏿 👍 (7) 👎 (4) 
+
+[04/20/2024 12:31] nonn_ac
+what's the difference bettween `vaultsKerosene`&`vaults`?
+
+
+[04/20/2024 12:32] .0xsecuri
+https://discord.com/channels/810916927919620096/1229440078280130634/1231142188990206046
+
+{Reactions}
+👍 
+
+[04/20/2024 12:48] kartoonjoy
+Started a thread.
+
+
+[04/20/2024 12:53] tobezzi
+first official audits, looks like I cant see shit lmao
+
+
+[04/20/2024 13:15] .0xsecuri
+Hey @shafu, could you provide some examples or further details about the tokens referred to as 'LSTs' and 'LRTs' mentioned in the documentation?  I'm curious about what other types of tokens the protocol is considering supporting.
+
+
+[04/20/2024 13:39] 0xdemonnn
+Create a private thread, pls check if have time thanks @Joey Roth@shafu@ehjc@Max
+
+
+[04/20/2024 13:55] 0xwizard
+guys I might be late to the party
+
+
+[04/20/2024 13:55] 0xwizard
+but is valutmanager wronglylisted?
+
+
+[04/20/2024 13:55] 0xwizard
+it's 308 lines
+
+
+[04/20/2024 13:55] shafu0x
+that is a great question for @Joey Roth
+
+
+[04/20/2024 13:56] tobezzi
+is vaultmanagerv2
+
+
+[04/20/2024 13:57] 0xwizard
+yeah valutmanagerV2
+
+
+[04/20/2024 13:57] 0xwizard
+it's 308 line
+
+
+[04/20/2024 14:03] mylifechangefast.eth_70767
+Don't worry they will come back:chefskiss:
+
+{Reactions}
+chefskiss 
+
+[04/20/2024 14:19] krisp6347
+@shafu  Does my understanding about vaults is correct - my understanding is that each vault is unique for each collateral and each vault contains a mapping id2Asset. Where id is the id of the DNFt and asset is basically the amount of collateral deposited by the user. But it is confusing to me how this whole think works ? COuld you clarify a little bit on that please?
+
+
+[04/20/2024 14:28] auditor_79099
+DNftOwner is trusted?
+
+
+[04/20/2024 14:28] 0xpopeye
+@shafu @Max check PT please
+
+
+[04/20/2024 14:35] vizay315
+wETH or WstETH
+
+
+[04/20/2024 15:19] nmirchev8
+Where is `kerosine` minted?
+
+
+[04/20/2024 15:22] marioyordanov
+@shafu what is `vaults` and `vaultsKerosene` used for? What is the difference between them?
+
+
+[04/20/2024 15:22] iwildsniperi
+from multisig
+
+
+[04/20/2024 15:24] brivan
+Check the video pinned
+
+
+[04/20/2024 15:24] iwildsniperi
+can you look for my PT?
+
+
+[04/20/2024 15:25] nmirchev8
+If i want to get 100 kerosine tokens, what is the procedure?
+
+
+[04/20/2024 15:26] iwildsniperi
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-B36AC.png
+
+
+[04/20/2024 15:26] brivan
+Mentioned in the docs
+
+{Reactions}
+❤️ 
+
+[04/20/2024 15:49] nmirchev8
+Where do we provide liquidity? 
+I cannot find it in contracts
+
+
+[04/20/2024 15:51] iwildsniperi
+i think staking and add collaterals
+
+{Reactions}
+🤔 ✅ (2) 
+
+[04/20/2024 15:59] itsabinashb
+Please check my private thread @shafu @Max  . #deleted-channel
+
+
+[04/20/2024 16:48] krisp6347
+Guys, could someone help me understand the purpose of this mapping? What does the first uint represent? Is it an ID of the asset in the vault or something else? I totally got confused ... 
+```    mapping(uint => uint) public id2asset;
+```
+
+
+[04/20/2024 16:52] infectedfuture
+id2asset[dNFT id] = desposited asset balance
+
+
+[04/20/2024 16:53] infectedfuture
+so each vaults (can be wsteth vault, kerosene vault, ...) keep track of deposits for a dNFT position
+
+
+[04/20/2024 16:55] krisp6347
+what exactly dNFT is I wasn't able to understand. It gives you some rights to mint in a cheaper way, but why do we need an nft id in the vault, and why do we use its id to track how much asset we've deposited. This confuses me. Let's say we have Vault, simple WETH Vault, what dNFT will be here ?
+
+
+[04/20/2024 16:57] micc01
+is 1DYAD = 1$???
+
+
+[04/20/2024 16:58] infectedfuture
+If my understanding is correct, users do not own a vault. 
+There's only one instance of each vault for everyone. 
+Users cannot directly interact with vaults (because of `onlyVaultManager` modifier), they need to go through VaultManagerV2
+VaultManagerV2 have `isDNftOwner` and `isValidDNft` modifier to ensure caller of the function own a DNFT
+
+
+[04/20/2024 16:58] micc01
+???
+
+
+[04/20/2024 17:00] iwildsniperi
+that is the goal of the protocol
+
+
+[04/20/2024 17:02] micc01
+yeah , i was asking this because in the test they mint 1e20 DYAD so I was kinda suspicious 😳
+
+
+[04/20/2024 17:02] krisp6347
+Yeah, yeah I understand this part, but I cannot understand why do we need NFT altogether ? 😅  I mean - let's for example say we are dealing with the WETH vault. What this function should return 
+```   function getUsdValue(uint id) external view returns (uint) {
+        return
+            (id2asset[id] * assetPrice() * 1e18) /
+            10 ** oracle.decimals() /
+            10 ** asset.decimals();
+    }
+```
+
+
+[04/20/2024 17:03] krisp6347
+The current USD value of all of the WETH deposited into this WETH vault ?
+
+
+[04/20/2024 17:05] iwildsniperi
+tied to the dNFT
+
+
+[04/20/2024 17:05] iwildsniperi
+its like tracking system for every user
+
+{Reactions}
+👍 
+
+[04/20/2024 17:06] iwildsniperi
+sorry but where are the suspicioun?
+
+
+[04/20/2024 17:07] krisp6347
+so basically, `getUsdValue()` func from above will return how much collateral a particular user deposited, as he will pass his nft id to it, is my understanding correct ?
+
+
+[04/20/2024 17:07] micc01
+that are they minting 1e20 dollars or do it functions like eth (1e18 wei) , i mean fungible
+
+
+[04/20/2024 17:10] jvorex
+1e20 means mint 100 DYAD stablecoins.
+
+
+[04/20/2024 17:11] micc01
+ohkk ohkk, thanks bro
+
+
+[04/20/2024 17:11] iwildsniperi
+yes
+
+
+[04/20/2024 17:12] micc01
+saved me from writing an invalid POC 🥲
+
+{Reactions}
+❤️ 
+
+[04/20/2024 17:12] jvorex
+now you owe me the lead
+
+{Reactions}
+😂 (8) 
+
+[04/20/2024 17:12] krisp6347
+Understood, thank you ser!
+
+
+[04/20/2024 17:12] iwildsniperi
+your welcome
+
+
+[04/20/2024 17:56] tigerfrake
+What's the difference between licensed vaults and unlicensed ones? Any advantage that comes with licensed vaults?
+
+
+[04/20/2024 17:56] _0xmax
+minting the stablecoin
+
+{Reactions}
+👍 
+
+[04/20/2024 17:58] tigerfrake
+So unlicensed vaults csn be used? Why
+
+
+[04/20/2024 18:08] _0xmax
+unlicensed vaults serve no purpose until they become licensed, which currently happens via msig and in the future via governance
+
+
+[04/20/2024 18:08] ivi4yh3ivi
+so the current price to mintNft is 0.745 eth and that's just to gain entry to system? user would still need to add vault and deposit on top of that?
+
+
+[04/20/2024 18:10] krisp6347
+@MaxCould you explain the purpose behind this function and the idea behind users ability to add vaults to their NFT ?
+
+```    function add(uint id, address vault) external isDNftOwner(id) {
+        if (vaults[id].length() >= MAX_VAULTS) revert TooManyVaults();
+        if (!vaultLicenser.isLicensed(vault)) revert VaultNotLicensed();
+        if (!vaults[id].add(vault)) revert VaultAlreadyAdded();
+        emit Added(id, vault);
+    }
+```
+
+
+[04/20/2024 18:11] _0xmax
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-B6690.png
+
+
+[04/20/2024 18:13] _0xmax
+There's one vault per collateral type. 
+Everyone's collateral is in the same vault(s).
+Your positions are tracked in the notes metadata.
+
+
+[04/20/2024 18:14] wanziskata
+someone already asked but I couldn't quite understand whether the current implementation of VaultManagerV2 supports both unbouded and bounded vaults - can you please clarify?
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-F3145.png
+
+
+[04/20/2024 18:17] krisp6347
+Sorry, I didn't quite catch that. Could you please elaborate a bit more? I'm having trouble understanding. So, if I understand correctly, there is one WETH vault for the entire protocol where we can deposit, and our deposits are tracked by our individual NFTs, right? What I'm trying to figure out is why there are multiple vaults for WETH vault. That's the part that's confusing me.
+
+
+[04/20/2024 18:19] _0xmax
+we've currently got a weth and wsteth vault deployed/licensed
+
+
+[04/20/2024 18:20] 0xauditism
+aren't the users supposed to earn Kerosine ? I fail to see how
+
+
+[04/20/2024 18:21] _0xmax
+via LP incentives targeting selected (by us) pools
+
+{Reactions}
+✅ (2) 
+
+[04/20/2024 18:21] 0xauditism
+okk
+
+
+[04/20/2024 18:22] _0xmax
+stake LP tokens = earn rewards
+
+
+[04/20/2024 18:23] krisp6347
+okay and it is where everybody is expected to deposit, right? So, what is the purpose of having a way to add multiple vaults? I mean what will they be used for?
+
+
+[04/20/2024 18:25] ehjc
+Multiple vaults hold multiple collateral types against which you can mint the stable coin (DYAD)
+
+
+[04/20/2024 18:26] _3doc_
+Started a thread.
+
+
+[04/20/2024 18:28] _0xmax
+one vault per asset type.
+
+
+[04/20/2024 18:28] wanziskata
+🧐
+
+
+[04/20/2024 18:29] krisp6347
+I see, but isn't it that let's say for every asset(erc-20) there should be one vault e.g.  WETH we have one vault, one for wsETH, so on
+```  address MAINNET_WETH_VAULT      = 0xcF97cEc1907CcF9d4A0DC4F492A3448eFc744F6c;
+  address MAINNET_WSTETH_VAULT    = 0x7aE80418051b2897729Cbdf388b07C5158C557A1;
+```
+
+They will be deployed by the protocol right, and as a user how can I use the `function add(uint id, address vault)` for adding a vault, to where I should add it and why I should add it as there are already deployed vaults ?
+
+
+[04/20/2024 18:30] _0xmax
+bounded kerosene = users locking their kerosene indefinitely in exchange for a bonus
+unbounded kerosene =  non locked and regular value applies
+
+{Reactions}
+👍 
+
+[04/20/2024 18:31] krisp6347
+because when I want to deposit I'll call 
+```
+    function deposit(
+        uint id,
+        address vault,
+        uint amount
+    ) external isValidDNft(id) {
+        Vault _vault = Vault(vault);
+        _vault.asset().safeTransferFrom(msg.sender, address(vault), amount);
+        _vault.deposit(id, amount);
+    }
+``` 
+wtih WETH vault address and it will deposit my WETH to this vault and it will be tracked by my nft id, right ? What is the purpose of having `add(uint id, address vault)` in case where we will have one vault per asset type ?
+
+
+[04/20/2024 18:31] wanziskata
+sure, I understood that, but as shafu replied, the boundedVault can be added "later"; would that mean that VaultManagerV2 will later be upgraded so it supports boundedVaults, or does it currently support them?
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-1809F.png
+
+
+[04/20/2024 18:32] _0xmax
+you are talking about adding it to your dNFT, correct? there are gas limitations which is why there's a max number of vaults per dNFT. Users can select which ones they want to add
+
+
+[04/20/2024 18:33] krisp6347
+yes, I'm talking about my dNFT
+
+
+[04/20/2024 18:33] krisp6347
+but is there a need to add them to it ?
+
+
+[04/20/2024 18:33] krisp6347
+Couldn't I just call deposit as I described above: https://discord.com/channels/810916927919620096/1229440078280130634/1231311376794914936
+
+
+[04/20/2024 18:35] _0xmax
+I am here to answer broader questions. @shafu can explain in detail if that helps
+
+
+[04/20/2024 18:36] krisp6347
+sure, looking forward for his answer then,  thanks anyways!
+
+
+[04/20/2024 18:38] itsabinashb
+@Max could you please check my thread #deleted-channel
+
+{Reactions}
+👍 
+
+[04/20/2024 18:48] auditor_79099
+Hi @Max , could you please check my private thread?
+
+
+[04/20/2024 18:49] _0xmax
+can you link it? there's quite a bunch and no structure to it
+
+
+[04/20/2024 18:49] auditor_79099
+https://discord.com/channels/810916927919620096/1231242171949121606
+
+
+[04/20/2024 18:50] _0xmax
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-2277A.png
+
+
+[04/20/2024 18:50] ljj
+If you are holding different types of tokens and would like to use them as collateral you can do it via multiple vaults if the system accepts them (has vaults created for them)
+
+
+[04/20/2024 18:51] auditor_79099
+link : https://discord.com/channels/810916927919620096/1231242171949121606
+
+
+[04/20/2024 18:51] ljj
+if there weren't ways to add new vaults you would have to use one vault so that would require you to swap to that token first and then deposit to that vault
+
+
+[04/20/2024 18:51] _0xmax
+no access 🤷‍♂️
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-0906B.png
+
+
+[04/20/2024 18:57] auditor_79099
+Excuse me, please check.
+
+
+[04/20/2024 19:54] iwildsniperi
+@shafu should we consider further erc20 implentation like weird erc20?
+
+
+[04/20/2024 19:56] shafu0x
+No ser
+
+{Reactions}
+❤️ (2) 
+
+[04/20/2024 20:07] infectedfuture
+readme says the opposite actually 🤔
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-AF820.png
+
+
+[04/20/2024 20:08] infectedfuture
+but its also true you only talked about weth, wsteth, and LST/LRT in doc
+
+
+[04/20/2024 20:11] iwildsniperi
+ye thats why i asked
+
+
+[04/20/2024 20:12] iwildsniperi
+ok thx
+
+
+[04/20/2024 20:51] marioyordanov
+what is the difference between Licenser and KerosineManager
+
+
+[04/20/2024 20:51] shafu0x
+true, sorry about that.
+
+
+[04/20/2024 21:02] auditor_79099
+Hi @shafu , why don't you reply for my question?
+
+
+[04/20/2024 21:08] shafu0x
+Link me to the question
+
+
+[04/20/2024 21:14] marioyordanov
+my question also - https://discord.com/channels/810916927919620096/1231348956290613328/1231348958341627995
+
+
+[04/20/2024 23:44] auditor_79099
+can you look at my PT?
+
+
+[04/21/2024 00:56] poeaudits
+Does it really cost ~0.63 eth to mint a DNFT on mainnet?
+
+
+[04/21/2024 01:38] auditor_79099
+https://discord.com/channels/810916927919620096/1231242171949121606
+
+
+[04/21/2024 03:29] tamayonft
+No test for the vaulManager v2?
+
+
+[04/21/2024 04:55] krisp6347
+Thanks man! I just woke up and somehow I've realized that as well 😄 But still, thanks a lot for your help! You explained it most clearly so far!
+
+
+[04/21/2024 06:06] .0xsecuri
+Hey @Joey Roth, just following up on my question. Any chance you could take a moment to respond ?
+
+
+[04/21/2024 06:39] tamayonft
+There is no test for the vaultManagerV2?
+
+
+[04/21/2024 08:05] poeaudits
+There are a couple in the fork folder
+
+
+[04/21/2024 08:05] auditor_79099
+Could you explain why Vault1, Vault2, and Vault3 exist separately?
+
+
+[04/21/2024 08:32] ljj
+No worries friend sometimes all you need is a little break
+
+{Reactions}
+🫡 
+
+[04/21/2024 09:14] auditor_79099
+And which token is LP token that described in docs?
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-45423.png
+
+
+[04/21/2024 09:26] dudex2684
+is the `nonKerosenes` are wEth and wstEth ?
+
+
+[04/21/2024 09:28] .0xsecuri
+For now yes, but they plan to support other ERC-20s as well
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/Screenshot_2024-04-21_at_12.27.23-26BC3.png
+
+
+[04/21/2024 09:29] dudex2684
+hnm yeah
+
+
+[04/21/2024 09:33] .0xsecuri
+@shafu, could you confirm if I understand the liquidation process correctly? The liquidator pays the amount of DYAD tokens equal to user's DYAD minted balance. In return, they receive that same amount(as the amount they've liquidated) + 20% bonus from the collateral of the liquidated user. And if there's any collateral remaining from the user's position after the liquidation, can the user redeem it?
+
+{Reactions}
+👍 (3) 
+
+[04/21/2024 09:40] mrmorningstar96
+So when they withdraw from non bounded vault do they withdraw kerosine tokens only or weth and wsteth also? @Dudex
+
+
+[04/21/2024 09:41] dudex2684
+Depends on you which collateral type you have deposited into your dNFT
+
+
+[04/21/2024 09:45] mrmorningstar96
+Got it so they can withdraw different tokens depending on what they deposited (currently kerosene, wEth and wstETH) from the non bounded vault, and in bounded vault only kerosene can be deposited but it cannot be withdrawn
+
+
+[04/21/2024 09:47] dudex2684
+yupp
+
+{Reactions}
+👍 
+
+[04/21/2024 10:01] leon0x01
+```function assetPrice() 
+    public 
+    view 
+    override
+    returns (uint) {
+      return unboundedKerosineVault.assetPrice() * 2;
+  }```  what's the reason behind always returning twice the unbounded assetprice
+
+
+[04/21/2024 10:06] mrmorningstar96
+when you deposit in bounded vault the price of kerosene tokens are doubled, you have more info on that in the code review video
+
+
+[04/21/2024 10:56] _0xmax
+Gm guys! Just wanted to say we are happy to see the massive interest here and in private questions!
+I'm mostly here to answer broader questions and made sure to tag @shafu wherever needed.
+He will get back to you asap. Keep up the good work!
+
+{Reactions}
+👍 (2) 
+
+[04/21/2024 10:59] micc01
+can you link the code review video?
+
+
+[04/21/2024 11:01] mrmorningstar96
+https://www.youtube.com/watch?v=ok4CBaqEajM&ab_channel=shafu
+
+{Embed}
+shafu
+https://www.youtube.com/watch?v=ok4CBaqEajM
+DYAD V2 - Kerosene - Code4rena Audit
+DYAD is the first truly capital efficient decentralized stablecoin. Traditionally, two costs make stablecoins inefficient: surplus collateral and DEX liquidity. DYAD minimizes both of these costs through Kerosene, a token that lowers the individual cost to mint DYAD.
+
+https://dyadstable.notion.site/DYAD-design-outline-v6-3fa96f99425e458abbe574f6...
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/maxresdefault-0437D.jpg
+
+
+[04/21/2024 11:05] micc01
+Thanks
+
+
+[04/21/2024 11:06] itsabinashb
+How many participants? any guess? 😅  @Max
+
+
+[04/21/2024 11:06] jvorex
+@Max please see our thread when you get some time
+
+{Reactions}
+👍 
+
+[04/21/2024 11:10] _0xmax
+note that i have no frame of reference here
+
+
+[04/21/2024 11:11] itsabinashb
+Just asking because of the rush of auditors 🙂
+
+
+[04/21/2024 11:12] _0xmax
+maybe its relatively quiet vs other contests, that i dont know 😉
+
+
+[04/21/2024 11:13] ljj
+since you can't withdraw Kerosene in bounded vault its supposed to give 2 times the rewards
+
+
+[04/21/2024 11:26] the_first_elder
+Please check private message
+
+
+[04/21/2024 11:37] _0xmax
+i don't see it. can you link please?
+
+
+[04/21/2024 11:46] the_first_elder
+Can you check again ser
+
+{Reactions}
+👍 
+
+[04/21/2024 11:54] favelanky
+Can you share with us the DYAD architecture file that was shown in the video please?
+
+
+[04/21/2024 11:59] _0xmax
+i believe links are in the video description
+
+{Reactions}
+👍 (2) 🙏 
+
+[04/21/2024 12:00] _0xmax
+https://drive.google.com/file/d/1-rbc44QivKoHCWr1FxTZWNL_uiQK7BLp/view
+
+{Embed}
+https://drive.google.com/file/d/1-rbc44QivKoHCWr1FxTZWNL_uiQK7BLp/view
+Dyad Architecture.pdf
+
+
+[04/21/2024 12:26] donkicha
+Just to be sure, anyone can call the `UnboundedKerosineVault` contract, right?
+
+
+[04/21/2024 12:27] donkicha
+And the caller should set the params of the constructor, right?
+
+
+[04/21/2024 12:32] theschnilch
+Why isn't the BoundedVault added right after deployment?
+
+
+[04/21/2024 13:14] infectedfuture
+495 view on the code walkthrough vid, just sayin' 🤣
+
+
+[04/21/2024 13:17] haxatron1
+Looks like it will be $1 rewards again 😂
+
+{Reactions}
+😂 (10) 
+
+[04/21/2024 13:18] tigerfrake
+Lmao
+
+
+[04/21/2024 13:19] brivan
+The number of duplicates will be amazing. I'm ready for my $3 again
+
+{Reactions}
+😂 (3) 
+
+[04/21/2024 13:20] mylifechangefast.eth_70767
+Dups >> Solo
+
+
+[04/21/2024 13:34] iwildsniperi
+why that much?
+there are multiple contests runing🥲
+
+
+[04/21/2024 13:38] valkataaa
+i watched the walkthrough 3 times dont worry
+
+
+[04/21/2024 13:38] valkataaa
+:DDD
+
+{Reactions}
+😂 (15) 
+
+[04/21/2024 13:38] infectedfuture
+I can also see some 0.01$ 😆 
+But this means low dups will get all the reward, so this is even more motivating from this pov
+
+
+[04/21/2024 13:40] infectedfuture
+not that much tbh if you remove previous contests that are ending + private/invitational/mitigations ones
+
+{Reactions}
+🥲 (2) 
+
+[04/21/2024 14:17] iwildsniperi
+should i stop working?
+its my first contest and i want it to be more motivative🥲
+
+
+[04/21/2024 14:19] iwildsniperi
+just kiding 
+iam coming with my solos
+
+{Reactions}
+🔥 (9) 
+
+[04/21/2024 14:25] iwildsniperi
+@shafu can you respond to my PT
+i have multiple ones
+
+
+[04/21/2024 14:26] iwildsniperi
+thats a good sign❤️
+
+
+[04/21/2024 14:27] auditor_79099
+Can dyad token be larger than $1? If so, how?
+
+
+[04/21/2024 14:30] iwildsniperi
+exaclt like usdt going to 1.05 sometimes
+its supply and demand
+the job of the protocol is to keep every DYAD redeemable for 1$ value not to keep its price at 1$
+
+
+[04/21/2024 14:30] iwildsniperi
+you got it?
+
+
+[04/21/2024 15:27] _0xmax
+:pepe_youcantifyoudont:
+
+{Reactions}
+🥲 (2) 
+
+[04/21/2024 15:30] kristiqniliev57
+Is there any scenario where there is more than one Vault with the same assets(e.g 2 different Vaults with wETH as an asset) ?
+
+
+[04/21/2024 15:37] itsabinashb
+@shafu please check my private thread #deleted-channel
+
+
+[04/21/2024 15:49] kristiqniliev57
+Maybe I don't quite get the purpose that Vaults serve. I will describe what my understanding as of now is and I'd be glad if you correct the flaws:
+There are a limited number of Vaults distinguished by what asset(wstETH, wETH, Kerosene) you can mint DYAD against. 
+A DNft holder can add Vaults to which they can deposit collateral and mint DYAD or burn DYAD and get back their asset(used as collateral) 
+What confuses me is the maximum Kerosene Vaults that can be issued which is set to five.
+The latter implies one of two things:
+* There can be multiple Vaults issued of the same kind (if that is the case my understanding has drifted off into some wrong direction and i would like to know what the purpose behind that is)
+* There is room left for other types of Kerosine Vaults (other than bounded and unbounded) that can be added in the future
+
+Thank you and sorry for the long message
+
+
+[04/21/2024 15:50] mylifechangefast.eth_70767
+Are you a sponsor too?
+
+
+[04/21/2024 15:51] mylifechangefast.eth_70767
+@Max please check private thread
+
+
+[04/21/2024 15:58] auditor_79099
+Hi @shafu , I think if the user burns their DYAD, the DNFT owner calls the function by setting address(to) of withdraw() to address(user). Is it right?
+
+
+[04/21/2024 16:28] iwildsniperi
+he doesnt call withdraw() at all
+
+
+[04/21/2024 17:24] sovaslava9
+Why user could want remove vault, using VaultManager.remove() ?
+
+
+[04/21/2024 17:29] itsabinashb
+Hi, is it okay to use public gist?  i am having issue with creating toggle in markdown. Asking because with the gist anyone will know i submitted that issue.😅  @Max  @ehjc
+
+
+[04/21/2024 17:41] t1moh
+At least there is limit on number of vaults
+
+{Reactions}
+🙏🏼 
+
+[04/21/2024 18:54] auditor_79099
+What is the reason for executing `unboundedKerosineVault.setDenominator(kerosineDenominator);`?
+
+{Reactions}
+🤣 (2) 
+
+[04/21/2024 18:55] ljj
+so you can change the denominator
+
+{Reactions}
+😅 (2) 
+
+[04/21/2024 20:03] dimulski
+create a secret gist :D, only people with the link can see it
+
+
+[04/21/2024 22:06] nonn_ac
+dose `onlyOwner` in `KerosineManager.sol` represent the protocol team member?
+
+
+[04/21/2024 22:06] kmm77
+I think it's a multisig wallet, owned by the team
+
+{Reactions}
+👍 
+
+[04/21/2024 22:32] nonn_ac
+are Kerosene token deposited via the deposit function?
+
+
+[04/21/2024 22:49] tamayonft
+Where the project is gonna be launch?
+
+
+[04/21/2024 23:14] iwildsniperi
+ETH
+
+
+[04/21/2024 23:15] iwildsniperi
+yes
+
+{Reactions}
+👍 
+
+[04/22/2024 00:21] auditor_79099
+Hi, @shafu , @ehjc , @Joey Roth , @Max , could you please check my thread?
+link: https://discord.com/channels/810916927919620096/1231242171949121606
+
+
+[04/22/2024 04:20] guy_in0xnito
+Bro what kind of thread are you creating
+If you want to add them in your pvt thread
+Just tag them in that
+You don't have to share the link
+
+
+[04/22/2024 05:50] vizay315
+`mintedDyad ` is a mapping in `vault.sol` 
+``` // vault manager => (dNFT ID => dyad)
+  mapping (address => mapping (uint => uint)) public mintedDyad; 
+```
+but in VaultMangerV2 it declares as calling a  function(in mintDyad function)
+```
+uint newDyadMinted = dyad.mintedDyad(address(this), id) + amount;
+```
+can anyone explain me why there is difference in declarations. @shafu
+
+
+[04/22/2024 05:52] aamirusmani1552
+Because every public variable can be called like a function in solidity. You don't have to declare a getter function for it.
+
+
+[04/22/2024 05:53] vizay315
+okay, by passing arguments it automatically calls that mapping and returns the result right
+
+
+[04/22/2024 05:53] vizay315
+thank you
+
+{Reactions}
+👍 (2) 
+
+[04/22/2024 07:51] sa3083
+Hi guys, @Joey Roth ,  @shafu  , @ehjc could you please check my private thread, i added my name in the title to be easier to find, there are multiple questions there where i would need your confirmations
+
+
+[04/22/2024 09:01] infectedfuture
+So, can we have a confirmation from judges what will stand as source of truth during judging phase? Readme or sponsor declaration? 
+I'm ok with anything, as far as it is clear, this will save a plenty of time for everyone (judges included)
+
+{Reactions}
+👀 ☝️ 
+
+[04/22/2024 09:23] thesavageteddy
+didnt sponsor say this? ^
+
+
+[04/22/2024 09:26] dimulski
+you can check the rules
+
+
+[04/22/2024 09:32] infectedfuture
+I'm pretty sure this is not clearly specified in the rules unfortunately, but I agree this is the way I see this
+
+
+[04/22/2024 09:34] infectedfuture
+interested if you find where its specified in the docs
+
+
+[04/22/2024 10:58] t1moh
+Nooo you want to invalidate my $0.00 Medium😭
+
+{Reactions}
+😂 (13) 
+
+[04/22/2024 11:32] linmiaomiao_qaq
+what is unbounded kerosine valut use？why it's asset price is double of bound kerosine vault?
+
+
+[04/22/2024 11:40] jvorex
+double because you can't withdraw your Kerosene tokens deposited in. Use: to take in Kerosene tokens deposited against a NOTE token and can be withdrawn anytime
+
+
+[04/22/2024 11:49] linmiaomiao_qaq
+I can't understand its use,and can't see any about this in doc,can you explain more detail about this?
+
+
+[04/22/2024 11:52] jvorex
+overtime according to the teams plans, DYAD stablecoins can be minted with endogenous asset in this case Kerosene tokens (since its the same team that deploys the token). So if a Kerosene token were to be used as a collateral token to mint DYAD stablecoin, then such Kerosene token needs to go some place because each vault has only 1 asset type e.g we can't send Kerosene into a wETH vault (that would be two assets now in one vault) so Kerosene tokens go to Kerosene vaults, wETH collateral go to wETH vault.
+
+{Reactions}
+👍 (2) 
+
+[04/22/2024 11:54] jvorex
+unbounded means if I were to provide Kerosene token for minting 100 DYAD stablecoins, at some point when I need those tokens back, I can withdraw the collateral Kerosene but in the case of a bounded kerosene vault, whatever Kerosene goes in never comes out
+
+
+[04/22/2024 11:59] linmiaomiao_qaq
+thanks，I understand.Because it's bound and kerosine will not be withdrawn,this part kerosine token will transfer to dyad token to be bound, alright?
+
+
+[04/22/2024 12:00] jvorex
+right!
+
+{Reactions}
+👍 
+
+[04/22/2024 12:11] infectedfuture
+Started a thread.
+
+
+[04/22/2024 13:43] sil3th
+@shafu check PVT
+
+
+[04/22/2024 13:59] krisp6347
+What should `liquidationEquityShare` and `liquidationAssetShare represent` (liquidate function) ? I'm having a hard time understanding their purpose. Could somebody help me out here?
+
+
+[04/22/2024 14:12] skid0016
+Please i want to know the difference between this two
+
+mapping (uint => EnumerableSet.AddressSet) internal vaults; 
+  mapping (uint => EnumerableSet.AddressSet) internal vaultsKerosene
+
+
+[04/22/2024 14:12] 0xfox_
+the asset share is the portion of the full collateral that the liquidator will receive aka compensation for the debt they paid off + reward if any
+
+
+[04/22/2024 14:14] stormreckson
+Internal mappings between the Id and the vaults, normal vaults and kerosene vault
+
+{Reactions}
+👍 
+
+[04/22/2024 14:14] 0xfox_
+the equity share is the portion of the leftover collateral (after debt) that is allocated as reward for the liquidator
+
+
+[04/22/2024 14:18] krisp6347
+Thanks @0xfox, I think I understood now. You mentioned ` + reward if any` my understanding was that the liquidator always receives his 20% reward, is my understanding incorrect ?
+
+
+[04/22/2024 14:20] 0xfox_
+they won't receive a reward if the liquidatee is insolvent aka if the liquidatee is not overcollateralized for example they hold 100 DYAD and 90$ of collateral
+
+
+[04/22/2024 14:20] krisp6347
+Got it!
+
+
+[04/22/2024 14:20] krisp6347
+thanks
+
+{Reactions}
+🙏 
+
+[04/22/2024 14:53] bhilare_
+KerosineManager would only be having kerosine.bounded and kerosine.unbounded vaults right?
+
+
+[04/22/2024 15:05] brivan
+Take a look at the deploy script
+
+{Reactions}
+👍 
+
+[04/22/2024 15:57] _0xmax (pinned)
+https://youtu.be/64zoj0iLCy0?si=BeuoFShuG1lz9nXR
+
+{Embed}
+shafu
+https://www.youtube.com/watch?v=64zoj0iLCy0
+DYAD V2- Kerosene - Code4rena Audit #2
+DYAD is the first truly capital efficient decentralized stablecoin. Traditionally, two costs make stablecoins inefficient: surplus collateral and DEX liquidity. DYAD minimizes both of these costs through Kerosene, a token that lowers the individual cost to mint DYAD.
+
+https://dyadstable.notion.site/DYAD-d...
+https://github.com/code-423n4/2024-04...
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/maxresdefault-B21E1.jpg
+
+{Reactions}
+thankyou (3) 
+
+[04/22/2024 16:02] _0xmax
+@here please watch the above
+
+{Reactions}
+🆙 (4) 
+
+[04/22/2024 16:04] brivan
+The sponsors seem getting tired of obvious questions that could be avoided if some wardens spend sometime reading the docs and the codebase.
+
+{Reactions}
+👆 (3) 💯 (8) 
+
+[04/22/2024 16:06] ljj
+Agree with you, however this is why leaving comments on your codebase is important for sponsors to do also.
+
+
+[04/22/2024 16:07] brivan
+Execuse me, but the codebase is really straightforward and simple to understand if someone give it a bit of time. But yeah, let's not start this and focus on finding some bugs.
+
+
+[04/22/2024 16:07] ljj
+Yes already said I agree with you friend
+
+{Reactions}
+🫡 
+
+[04/22/2024 16:17] kartoonjoy
+Pinned a message.
+
+
+[04/22/2024 18:30] sa3083
+is Kerosine 1e8 or 1e18 ?
+
+
+[04/22/2024 18:35] jvorex
+18
+
+
+[04/22/2024 18:56] idarrha_adam
+in the deployment script why are you redeploying the eth and wsteth vaults?
+
+
+[04/22/2024 20:00] vasil_sariev
+https://discord.com/channels/810916927919620096/1229440078280130634/1231997274964361238 
+Here it's explained
+
+{Reactions}
+🙏 
+
+[04/22/2024 20:50] kartoonjoy (pinned)
+📢 Wardens, The only tokens in scope are weth, wsteth, and the ones [defined here](https://github.com/code-423n4/2024-04-dyad?tab=readme-ov-file#general-questions)
+
+Vulnerabilities related to these token behaviours are only considered valid if they actually exist in tokens which are used, e.g. Kerosene, weth, etc.
+
+{Reactions}
+🔥 
+
+[04/22/2024 20:50] kartoonjoy
+Pinned a message.
+
+
+[04/22/2024 20:51] elizabeth8460u
+link is private, make it open pls
+
+{Reactions}
+thankyou 
+
+[04/22/2024 20:55] kartoonjoy
+Updated the link. Thank you
+
+{Reactions}
+🫰 thankyou 
+
+[04/22/2024 21:09] banditx0x
+Lmao https://twitter.com/shafu0x/status/1782487036013760693?t=rww4iLKXCW971v3EfJQ_Fw&s=19
+
+{Embed}
+https://twitter.com/shafu0x/status/1782487036013760693?t=rww4iLKXCW971v3EfJQ_Fw&s=19
+shafu (@shafu0x) on X
+One genius Auditor is worth more than a legion of average Auditors.
+Twitter
+
+{Reactions}
+😄 💀 (10) 
+
+[04/22/2024 21:26] dimulski
+good thing you made this cool graph for ERC20 token behaviors in scope
+
+
+[04/22/2024 21:27] poeaudits
+I knew that was going to cause a bunch of issues when I first saw it.
+
+
+[04/22/2024 21:28] dimulski
+clearly, some time saved from escalations 😄
+
+{Reactions}
+4739_Skeletor 
+
+[04/22/2024 21:40] _0xmax
+not afraid ay
+
+
+[04/22/2024 21:41] elizabeth8460u
+check private, pls
+
+
+[04/23/2024 02:39] iwildsniperi
+Lmoa 
+You came to this contest too🥲
+
+
+[04/23/2024 03:38] s1h4y4_
+Question about deposit. When I call `VaultManagerV2.deposit()`, it will then call `Vault.deposit()` and there is check `onlyVaultManager()`  `if (msg.sender != address(vaultManager)) revert NotVaultManager();` in place. 
+
+How can I perform deposit when I don't have controll to vaultManager address to perform deposit?
+
+
+[04/23/2024 03:43] irreverent.eth
+be a dnft owner
+
+
+[04/23/2024 03:44] thesavageteddy
+i dont understand this question, you should be able to deposit through vaultmanagerv2?
+
+
+[04/23/2024 03:47] elizabeth8460u
+vaultManager will be msg.sender in subsequent when u call deposit() on it
+
+
+[04/23/2024 04:03] s1h4y4_
+But there is a check on `Vault.deposit()` (which is called by `vaultManagerV2.deposit()`) that checks if the msg.sender is the address(vaultManager)
+
+
+[04/23/2024 04:03] s1h4y4_
+Hmm I thought the msg.sender will remain as my address throughout the transaction
+
+
+[04/23/2024 04:05] mctoady
+tx.origin is your address, msg.sender is the address the call comes from (in this case vaultManagerV2)
+
+
+[04/23/2024 04:09] mctoady
+Just FYI:
+https://docs.soliditylang.org/en/v0.8.20/cheatsheet.html#block-and-transaction-properties
+
+
+[04/23/2024 04:09] s1h4y4_
+Ahh got it, I mixed up tx.origin and msg.sender
+
+
+[04/23/2024 04:09] s1h4y4_
+Thank you
+
+{Reactions}
+hi5 (2) 
+
+[04/23/2024 06:14] banditx0x
+just came to drop the tweet, not competing 🙂
+
+{Reactions}
+🫡 (5) 
+
+[04/23/2024 06:14] iwildsniperi
+Taking some deep breathe now😂
+
+
+[04/23/2024 06:23] aamirusmani1552
+Here is another video from the sponsors regarding some doubts: https://youtu.be/64zoj0iLCy0?si=O6aM6UXRRDsNoWQH
+
+{Embed}
+shafu
+https://www.youtube.com/watch?v=64zoj0iLCy0
+DYAD V2- Kerosene - Code4rena Audit #2
+DYAD is the first truly capital efficient decentralized stablecoin. Traditionally, two costs make stablecoins inefficient: surplus collateral and DEX liquidity. DYAD minimizes both of these costs through Kerosene, a token that lowers the individual cost to mint DYAD.
+
+https://dyadstable.notion.site/DYAD-d...
+https://github.com/code-423n4/2024-04...
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/maxresdefault-B21E1.jpg
+
+
+[04/23/2024 06:36] r_mzy47
+in the deploy script shouldn't we add `unboundedKerosineVault` to `vaultManager`? using `addKerosene`
+
+
+[04/23/2024 06:42] nilay27
+those methods are supposed to be called by the owners of dnft, if you see that there is a check `isDNftOwner`, `addKerosene` is used by the owners of dnft to add the kerosene vaults that they want to associate their dnft with.
+
+{Reactions}
+🙏 
+
+[04/23/2024 07:25] _0xmax
+i don't stand behind that statement fyi.
+
+{Reactions}
+💯 (4) 
+
+[04/23/2024 07:28] _0xmax
+pride goeth before a fall
+
+{Reactions}
+👆 (6) 
+
+[04/23/2024 08:23] 0xtendency
+I saw the tweet as well, powerful words for someone getting an audit.
+
+This legion of average auditors are helping secure their code, they should be treated with some respect.
+
+{Reactions}
+✅ (15) 👑 (6) 
+
+[04/23/2024 08:27] sancybars
+It's motivation enough for auditors to find that crit vuln
+
+{Reactions}
+💯 (3) 
+
+[04/23/2024 08:27] jvorex
+that's the spirit. let's go!
+
+{Reactions}
+🔥 (5) 
+
+[04/23/2024 08:29] ehjc
+We sadly cannot control what people post, however, all wardens in here doing a great job and I appreciate all of them
+
+
+[04/23/2024 08:29] ehjc
+Thanks 🙏
+
+
+[04/23/2024 08:30] mctoady
+twitter fingers turn to finding fingers, you gettin' bodied by an average auditor - Drake, 2015
+
+{Reactions}
+😂 (6) 
+
+[04/23/2024 08:31] jvorex
+i can guarantee Drake never said that 😂  but yeah i get the info
+
+{Reactions}
+😂 (5) 
+
+[04/23/2024 08:31] bijan_f
+maybe he should spend more time answering questions instead of trash talking on twitter
+
+
+[04/23/2024 08:32] bijan_f
+bold statement for a dev who has no natspec and terrible test coverage
+
+{Reactions}
+goose (5) 🔥 
+
+[04/23/2024 08:32] mctoady
+the only way you can guarantee that is if you are in fact Drake 👀
+
+{Reactions}
+👀 (2) 
+
+[04/23/2024 08:35] jvorex
+Ayy
+Sometimes i need a verse for my lyrics
+Drop and give me 50
+
+
+[04/23/2024 08:36] 0xdemonnn
+Never find this lyrics on his song 😂
+
+
+[04/23/2024 08:37] _0xmax
+Exactly.
+
+
+[04/23/2024 08:39] _0xmax
+Hear! hear!
+
+
+[04/23/2024 08:43] _0xmax
+We are looking to expand our team so anyone in here finding criticals might even get a job offer. (Not sure if this is against C4 rules, if so i retract).
+
+{Reactions}
+chefskiss (10) ☝️ (2) 
+
+[04/23/2024 08:43] mctoady
+It's actually incredible reverse psychology to increase the wardens motivation to find all the bugs, and I don't appreciate it :kek:
+You're all doing a wonderful job, and in fact you've found everything, you should probably stop looking now 👀
+
+{Reactions}
+😂 (17) 
+
+[04/23/2024 08:47] _0xmax
+Inb4 a horde of average auditors unleash their vengeance
+
+{Reactions}
+😂 (7) 
+
+[04/23/2024 09:14] itsabinashb
+Hey guys, don't take the tweet personally, it is Shafu's opinion, he may not wanna disrespect anyone. So chill and break the code. 🙂
+
+{Reactions}
+💯 (6) 
+
+[04/23/2024 09:22] josephdara
+Hi @Max @shafu 
+Kindly check the private thread
+
+{Reactions}
+👀 
+
+[04/23/2024 09:25] harukiontheroad
+Wondering whether bounded KEROSENE would be counted into circulating supply or not?
+
+
+[04/23/2024 09:31] guy_in0xnito
+@shafu and @Max tagged you in pvt thread
+
+
+[04/23/2024 09:40] kartik_giri_47538
+It's more than motivation.
+
+
+[04/23/2024 09:44] kartik_giri_47538
+Hey i have wrote some tests if it is help full to you guys than i would love to make pr in dyad code base. And yeah the tests are written by the average auditor.
+
+
+[04/23/2024 09:46] mctoady
+probably save that until after the contest ends :wtf:
+
+{Reactions}
+🤣 
+
+[04/23/2024 09:47] kartik_giri_47538
+Ofcourse 😆
+
+
+[04/23/2024 10:13] lian0669
+Interesting, let's wait and see.
+
+
+[04/23/2024 10:24] thesavageteddy
+what do you mean by circulating supply? total supply minus kerosine in multi sig?
+
+
+[04/23/2024 10:39] alaga
+Hi @Max , @shafu 
+Please look into my private thread.
+
+
+[04/23/2024 11:18] mylifechangefast.eth_70767
+Are there no other contest apart from this😔
+
+
+[04/23/2024 11:19] mylifechangefast.eth_70767
+12 reactions on a message...
+
+
+[04/23/2024 11:29] guy_in0xnito
+What is the oracle.decimals ?
+
+
+[04/23/2024 11:29] thesavageteddy
+decimals of the underlying vault asset?
+
+
+[04/23/2024 11:30] guy_in0xnito
+Then what is asset.decimals?
+
+
+[04/23/2024 11:33] mctoady
+the oracle returns the price of the asset with decimals:
+ETH  = 315023 (2 decimals = 3150.23)
+
+the asset has its own decimals (eth having 18)
+
+
+[04/23/2024 11:40] thesavageteddy
+i'm not certain, but i think vault.asset.decimals queries and returns the decimals of the token directly, while oracle.decimals is the decimals returned by the chain link oracle
+
+
+[04/23/2024 11:40] thesavageteddy
+so they should be the same i think?
+
+
+[04/23/2024 11:44] aamirusmani1552
+The usd chainlink price feeds of assets gives answer in 8 decimals. while tokens in scope has 18 decimals.
+
+{Reactions}
+👍 ✅ (2) 
+
+[04/23/2024 12:27] idarrha_adam
+are you going to use Payments contract with vaultManagerv2 or no ?
+
+
+[04/23/2024 13:38] itsabinashb
+Sir please check my thread if possible @shafu #deleted-channel
+
+
+[04/23/2024 13:47] guy_in0xnito
+That is the reason of dividing it by 1e18
+
+
+[04/23/2024 16:28] iwildsniperi
+I already found some valids  as an average auditor😂
+
+
+[04/23/2024 16:30] iwildsniperi
+So i think c4 proved there point to be valuable :C4Keycap: ❤️
+
+{Reactions}
+hi5 (4) 
+
+[04/23/2024 17:32] limbooo9
+From publicly known issue in readme:
+> Unlicensing a vault can cause issues.
+Any issue under this rule will be oos?! I am not sure why a vault should be removed while it has been used by users!
+
+
+[04/23/2024 18:10] kartoonjoy
+Started a thread.
+
+
+[04/23/2024 18:38] 0xloscar01
+Is the C4 website down?
+
+
+[04/23/2024 18:55] ivanfitro
+no
+
+
+[04/23/2024 20:17] poeaudits
+In any group audit contest like this, you are going to get a wide range of people participating, including people who are just starting and trying to learn solidity/auditing as a beginner. These people also tend to ask a lot of questions which can be exhausting to deal with as a sponsor.
+
+{Reactions}
+💯 (3) 
+
+[04/23/2024 21:11] eme0242
+UnboundedKerosineVault will be added to a user’s id in VaultManager via addKerosene function right?
+
+{Reactions}
+👍 
+
+[04/24/2024 02:05] arkan2245
+Can we get the docs changed to update "Note" to "dNFT", so when we're making submissions there's less confusion when referencing the docs?
+
+
+[04/24/2024 02:18] iwildsniperi
+🤯  you duped my crit?🤯
+
+{Reactions}
+psyduck (8) 
+
+[04/24/2024 02:48] zhuyingqiuhua
+If the multisig(MAINNET_OWNER) transfer kerisone to the staking contract, kerosine price will be decrease. It may lead to liquidation depending on the transfer amount. How will the protocol handle this situation?
+
+
+[04/24/2024 02:50] iwildsniperi
+it will be vested lineary
+
+
+[04/24/2024 02:50] iwildsniperi
+not like bulk transfer
+
+
+[04/24/2024 02:50] iwildsniperi
+and liquidations is the user responsibility to add more collateral
+
+
+[04/24/2024 02:51] iwildsniperi
+```    
+    // @dev: We subtract all the Kerosene in the multi-sig.
+    //       We are aware that this is not a great solution. That is
+    //       why we can switch out Denominator contracts.
+```
+this was the comment too
+
+
+[04/24/2024 02:51] iwildsniperi
+and its stated in youtube vid
+
+
+[04/24/2024 02:58] zhuyingqiuhua
+Now the staking contract has kerosine, but if kerosine in staking contract is distributed fully to users as rewards.  The multisig need to transfer kerisine to staking contract to continue providing rewards.
+
+
+[04/24/2024 02:58] iwildsniperi
+@Max i think making announcement for your community pre such a thing is a good solution
+
+{Reactions}
+👍 
+
+[04/24/2024 02:59] iwildsniperi
+agree this may be very good point in QA
+but i stayed away from thinking about it as they know this is very bad thing to have
+
+
+[04/24/2024 03:01] zhuyingqiuhua
+😀thanks for your reply
+
+{Reactions}
+❤️ 
+
+[04/24/2024 03:01] iwildsniperi
+your welcome friend
+
+
+[04/24/2024 07:38] 0xblack_bird
+@shafu , @Max  can you check my pvt threat
+
+
+[04/24/2024 08:00] dinesh11g
+where can i see the mainnet owner balance of kerosine ? `kerosine.balanceOf(MAINNET_OWNER)`
+
+
+[04/24/2024 08:11] cholakovv
+you can see the address in Parameters.sol and check its balance in etherscan
+
+
+[04/24/2024 08:22] dinesh11g
+yeah
+
+
+[04/24/2024 08:25] nilay27
+Hey, just to be sure, given that it's my first audit here. 
+There doesn't seem to be any Analysis or gas reward pot. 
+
+So the only submission apart from H/M that I can make is Low/NC via QA Report, right?
+
+
+[04/24/2024 08:26] brivan
+Correct
+
+{Reactions}
+🫡 
+
+[04/24/2024 08:26] nilay27
+thanks 🙂
+
+
+[04/24/2024 15:15] 0xbtk
+@shafu   @Max check pt please
+
+
+[04/24/2024 15:47] dinesh11g
+VaultManagerV2 got upgraded from VaultManager ?
+
+
+[04/24/2024 15:57] zhuyingqiuhua
+VaultManager can't be upgraded. My guess is that `Vault Manager Licenser` remove `VaultManager` and add `VaultManagerV2` and let users move funds out and deposit into new vault.
+
+
+[04/24/2024 15:58] zhuyingqiuhua
+Just guess. Could be wrong.
+
+
+[04/24/2024 16:03] dinesh11g
+I don't think because the same logic was implemented from old contract.  It's already in production. so it should be destroyed ?
+
+
+[04/24/2024 16:04] zhuyingqiuhua
+🤣 don't know.
+
+
+[04/24/2024 16:18] dinesh11g
+lol
+
+
+[04/24/2024 16:28] vizay315
+do proof of code compulsory for submitting a vulnerability
+
+
+[04/24/2024 16:30] josh4324
+Any one knows how to add an image to the c4 submission page...i have tried using the markdown method but it is not working.
+
+
+[04/24/2024 16:34] t1moh
+Make sure you do it correctly in markdown, C4 doesn't render pictures in submission
+
+
+[04/24/2024 16:36] josh4324
+Thanks
+
+
+[04/24/2024 17:07] ahmedaghadi
+Hey @shafu ! What's the possible attack through flash loans due to which restrictions are added such that one can't deposit and withdraw in same block? Like what is the ideal attack path which was expected?
+
+
+[04/24/2024 17:11] ahmedaghadi
+Tagging you @Max , as you're the only sponsor admin who is online. ( Doesn't want to spam )
+
+
+[04/24/2024 17:13] _0xmax
+the goal is to prevent manipulation of the kerosene price
+
+
+[04/24/2024 17:15] ahmedaghadi
+Cool! Thanks! Was confused by some other issues too but it's kinda resolved
+
+
+[04/24/2024 19:50] smbv_1923
+@Max in unbounded vault in assetPrice() why the numerator has been multiplied by 1e8 , ain't it should be multiplied by 1e18?
+
+
+[04/24/2024 20:10] irving6969
+dyad is always 1$ right?
+
+
+[04/24/2024 20:15] vizay315
+it's design choice bro, they want to display the asset price up to 8 decimal places
+
+
+[04/24/2024 22:06] tamayonft
+Yes, it is stanlecoin
+
+{Reactions}
+hi5 (2) 
+
+[04/24/2024 22:06] tamayonft
+A stablecoin
+
+
+[04/24/2024 22:31] idarrha_adam
+why does the protocol want to have at least 100% of exogenous collateral ?
+
+{Reactions}
+🤔 (3) 
+
+[04/24/2024 22:59] idarrha_adam
+meaning not kerosene token
+
+
+[04/24/2024 23:10] ljj
+Not sure I understand the question but answer probably is: Because DYAD is a stable coin
+
+
+[04/24/2024 23:20] idarrha_adam
+the question is not why it need 1.5$ for every dyad minted, why does it need it to be in weth and wsteth and not kerosen token
+
+
+[04/24/2024 23:25] iwildsniperi
+to keep DYAD backed by 1$ collat
+
+
+[04/24/2024 23:26] iwildsniperi
+its like why circle have 1 bank usd for every usdc
+
+
+[04/24/2024 23:26] ljj
+Because then you don't need to deposit any new wETH etc into the protocol if you used the Kerosene to mint dyad without depositing any exogenous collateral it would mean that Kerosene value would go down
+
+
+[04/24/2024 23:27] idarrha_adam
+ok thanks
+
+
+[04/24/2024 23:27] ljj
+Since Kerosene value is calculated by the difference of TVL and dyadMinted it makes no sense to mint DYAD with Kerosene
+
+{Reactions}
+🙏 (3) 
+
+[04/25/2024 05:31] mctoady
+the USD price of the coin is 8 decimals
+the decimals of the token itself is 18
+
+
+[04/25/2024 05:41] dinesh11g
+why its' reducing the amount here `id2asset[id] -= amount;`   ?
+
+
+[04/25/2024 05:44] aamirusmani1552
+What you mean here? Shouldn't it reduce the amount if you withdraw from the vault? or you mean something else
+
+
+[04/25/2024 05:47] dinesh11g
+I mean i didn't understood the reason why it's reducing the balance of a specific `asset` associated with the given `id` by the amount being withdrawn.
+
+
+[04/25/2024 05:52] aamirusmani1552
+That is completely the opposite of when you deposit. Your balance in the vault is tracked like `TokenId => Amount Deposited`.
+
+
+[04/25/2024 05:58] dinesh11g
+ok, but why not it's not withdrawing the same amount it deposited ? Why it's reducing
+
+
+[04/25/2024 05:59] aamirusmani1552
+you can't withdraw more. It will overflow
+
+
+[04/25/2024 06:03] dinesh11g
+so it causes overflow even it wants to withdraw the same amount ?
+
+
+[04/25/2024 06:05] aamirusmani1552
+no it should work in this case
+
+
+[04/25/2024 06:06] dinesh11g
+no Natspec why it's reducing the amount from the asset
+
+
+[04/25/2024 06:08] 0xlemon
+This is like the user's balance of that asset and when withdrawing you just subtract the balance being withdrawn
+
+
+[04/25/2024 06:14] tezeoffor
+Why is `assetPrice()` in `Vault.kerosine.bounded` multiplied by 2?
+
+```
+
+function assetPrice() public view override returns (uint) {
+        return unboundedKerosineVault.assetPrice() * 2;
+    }
+}
+```
+
+
+[04/25/2024 06:14] 0xlemon
+It is considered more valuable as it cannot be withdrawn
+
+
+[04/25/2024 06:20] nonn_ac
+in order for one to 100 dyad atleast 150% of collateral token is need ?
+
+
+[04/25/2024 06:21] jvorex
+yessir
+
+{Reactions}
+👍 
+
+[04/25/2024 06:21] jvorex
+provide $1500 worth of wETH, mint $1000 worth of stablecoins
+
+
+[04/25/2024 06:35] tezeoffor
+How much `dyad.totalSupply` is the protocol starting with?
+
+
+[04/25/2024 07:08] nonn_ac
+MIN_COLLATERIZATION_RATIO comprises of wETH + dyad minted?
+
+
+[04/25/2024 07:52] tigerfrake
+:10_10:
+
+
+[04/25/2024 07:56] tigerfrake
+May have missed this but can one vault receive different types of collateral assets?
+
+
+[04/25/2024 08:00] jvorex
+no ser
+
+
+[04/25/2024 08:01] jvorex
+unless you want to run a donation to it of course then i can very much supply my address 😂
+
+{Reactions}
+👀 
+
+[04/25/2024 08:02] tigerfrake
+Lmao
+
+
+[04/25/2024 09:08] infectedfuture
+No, asset is tied to a vault.
+But a dNFT position can have multiple vaults attached to it, so you can deposit multiple assets in your dNFT and mint DYAD against your total collateral
+
+
+[04/25/2024 09:09] tigerfrake
+Thanks G
+
+{Reactions}
+🫡 
+
+[04/25/2024 09:32] brivan
+Read the function `collatRatio`
+
+
+[04/25/2024 09:47] _0xmax
+👀
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-1938E.png
+
+{Reactions}
+😂 (2) 
+
+[04/25/2024 10:36] dinesh11g
+this calculating the kerosine price; https://github.com/DyadStablecoin/contracts/blob/fc4ae90c125ae82a1e0e83a3fb2ad69d15a6c4c8/src/core/Vault.kerosine.unbounded.sol#L47 ?
+
+{Embed}
+https://github.com/DyadStablecoin/contracts/blob/fc4ae90c125ae82a1e0e83a3fb2ad69d15a6c4c8/src/core/Vault.kerosine.unbounded.sol
+contracts/src/core/Vault.kerosine.unbounded.sol at fc4ae90c125ae82a...
+The contracts for the DYAD ecosystem. Contribute to DyadStablecoin/contracts development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/contracts-288E8
+
+
+[04/25/2024 10:40] honour_d_dev
+yes
+
+
+[04/25/2024 10:44] dinesh11g
+and this: https://github.com/code-423n4/2024-04-dyad/blob/cd48c684a58158de444b24854ffd8f07d046c31b/src/core/Vault.kerosine.sol#L69 ?
+
+{Embed}
+https://github.com/code-423n4/2024-04-dyad/blob/cd48c684a58158de444b24854ffd8f07d046c31b/src/core/Vault.kerosine.sol
+2024-04-dyad/src/core/Vault.kerosine.sol at cd48c684a58158de444b248...
+Contribute to code-423n4/2024-04-dyad development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/81c04556-634a-451d-b2a0-c3e2a12ae184-870A7
+
+
+[04/25/2024 10:47] ivi4yh3ivi
+the first conract you linked inherits the second one
+
+
+[04/25/2024 10:48] dinesh11g
+how
+
+
+[04/25/2024 10:50] ivi4yh3ivi
+```js
+contract UnboundedKerosineVault is KerosineVault
+```
+
+
+[04/25/2024 10:55] honour_d_dev
+Yeah the function is overridden , notice that the one here doesn't have a body
+
+
+[04/25/2024 11:15] dinesh11g
+ok
+
+
+[04/25/2024 11:27] dinesh11g
+it would be good if natspec was written
+
+{Reactions}
+👆🏼 (2) 
+
+[04/25/2024 12:37] mylifechangefast.eth_70767
+Then that should be part of your Way.. Gotcha😎
+
+
+[04/25/2024 12:43] itsabinashb
+@Max  please check the thread, have one question. #deleted-channel
+
+
+[04/25/2024 14:46] tchkvsky
+@ehjc @shafu @Max Please check private thread.
+
+
+[04/25/2024 15:19] marioyordanov
+@shafu can you give some example for the liquidation part how it should behave. For example what the liquidator has to take after making the liquidation
+
+
+[04/25/2024 15:48] zhuyingqiuhua
+Liquidator will take partial or all collateral.
+
+
+[04/25/2024 15:52] brivan
+Read `liquidate` function
+
+
+[04/25/2024 15:53] brivan
+⬆️ + docs under section liquidation
+
+
+[04/25/2024 16:54] shafu0x
+see this ser https://docs.google.com/spreadsheets/d/1VBOJnaUcnwlIc-nShB0-eBRlDg6ceChcDf6O4EgHCuU/edit?usp=sharing
+
+{Embed}
+https://docs.google.com/spreadsheets/d/1VBOJnaUcnwlIc-nShB0-eBRlDg6ceChcDf6O4EgHCuU/edit?usp=sharing
+dyad liquidation
+Sheet1
+
+collat ratio,liquidationEquityShare,liquidationAssetShare,liquidator reward
+1.4,0.4,0.08,1.08,77%
+1.3,0.3,0.06,1.06,82%
+1.2,0.2,0.04,1.04,87%
+1.1,0.1,0.02,1.02,93%
+1,0,0,1,100%
+1,0,0,1,100%
+liquidation reward
+0.2
+min collat ratio
+150%
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/AHkbwyKBHl8a8tRf1E3yJ3acBJ8N_FxGD65NVLFx9m-DE007
+
+{Reactions}
+👌 (2) 
+
+[04/25/2024 18:11] brivan
+Existing weth and wsteth vaults will be deprecated ? (because of deploying new vaults) ?
+
+
+[04/25/2024 18:18] aamirusmani1552
+They said the user will be required to migrate the funds.
+
+{Reactions}
+thankyou 
+
+[04/25/2024 18:28] 0xfox_
+@Max could you please check the private thread i created name starts with my username
+
+
+[04/25/2024 19:19] mylifechangefast.eth_70767
+@shafu will your contracts be deployed on Arbitrum and optimism??
+
+
+[04/25/2024 19:19] dimulski
+only solana I think
+
+{Reactions}
+😂 (7) 
+
+[04/25/2024 19:19] ljj
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-2B67F.png
+
+
+[04/25/2024 19:21] mylifechangefast.eth_70767
+One of their sponsors said that later there will be interactions/ deployment on Arb and optimism.. They are still planning on that though
+
+
+[04/25/2024 19:22] mylifechangefast.eth_70767
+Since it a future development I
+
+
+[04/25/2024 19:22] ljj
+You should refer only to the Contest README for what's in scope though
+
+
+[04/25/2024 19:23] mylifechangefast.eth_70767
+Yeah I know right
+
+
+[04/25/2024 19:28] mylifechangefast.eth_70767
+They said I can issue it out if there would be a problem🥲
+
+
+[04/25/2024 19:31] _0xmax
+its clear whats in scope and you've asked if we had future plans
+
+{Reactions}
+👨‍⚖️ 
+
+[04/25/2024 19:31] _0xmax
+to which i gave an answer 🤷‍♂️
+
+
+[04/25/2024 19:47] jvorex
+@btk 👀
+
+{Reactions}
+🖖 
+
+[04/25/2024 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺Wardens The **DYAD** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢・c4-updates for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+
+[04/25/2024 20:02] brivan
+Gg folks and thanks to the sponsors for answering all the questions.
+
+The number of findings will be amazing and the number of duplicates will be even more amazing
+
+Waiting for my $3 again.
+Best of luck on the launch for the sponsors
+
+
+[04/25/2024 20:03] iwildsniperi
+If this is a 3$ payout i will quit
+
+
+[04/25/2024 20:03] brivan
+Ahah, a previous contest had lot of submissions with lot of dups, 2H were worth $3. What matters is experience you gain.
+
+{Reactions}
+🥲 
+
+[04/25/2024 20:04] iwildsniperi
+Iam preparing to get married by the payout 🥲😂
+
+{Reactions}
+😂 
+
+[04/25/2024 20:04] iwildsniperi
+Its my first ever contest
+
+
+[04/25/2024 20:05] jvorex
+cancel the wedding
+
+{Reactions}
+💯 (7) 😂 (5) 
+
+[04/25/2024 20:05] t1moh
+How much submissions do you guess?
+
+
+[04/25/2024 20:05] irving6969
+2k+
+
+
+[04/25/2024 20:05] brivan
+2k.
+
+
+[04/25/2024 20:05] iwildsniperi
+Backstage people tell us
+
+
+[04/25/2024 20:05] sp1cymeatball
+900-1.1k
+
+
+[04/25/2024 20:06] irving6969
+chat is super active
+
+
+[04/25/2024 20:06] iwildsniperi
+10k
+
+
+[04/25/2024 20:06] brivan
+Impossible
+
+
+[04/25/2024 20:06] irving6969
+69k actually
+
+
+[04/25/2024 20:06] iwildsniperi
+This is btc
+
+
+[04/25/2024 20:06] irving6969
+btc is going to zero
+
+
+[04/25/2024 20:06] theschnilch
+1337
+
+
+[04/25/2024 20:06] iwildsniperi
+If people tried to stay away from suggested attack vector they will eat good
+
+
+[04/25/2024 20:06] t1moh
+Will be way more
+
+
+[04/25/2024 20:08] iwildsniperi
+Search where people dont
+
+
+[04/25/2024 20:08] iwildsniperi
+I got some
+Pray for me to be solo
+
+{Reactions}
+🚀 (3) 
+
+[04/25/2024 20:09] _0xmax
+thanks frens
+
+{Reactions}
+❤️ (6) 
+
+[04/25/2024 20:10] ljj
+Thanks for the quick replies
+
+
+[04/25/2024 20:10] iwildsniperi
+Thx max for being kind and having small code but still smart logic
+
+
+[04/25/2024 20:10] ljj
+Good luck with the mitigation after the contest, you might need another contest
+
+{Reactions}
+😂 (4) mildpanic (2) 
+
+[04/25/2024 20:11] ahmedaghadi
+I was still auditing ( because I was late in the contest ) and I was pretty sure about one HIGH vulnerability but wasn't able to create POC before the time ends :(. And guess what, I found another vulnerability due to which I was getting issue in creating POC :(. Wasn't able to submit 2 HIGH then.
+
+Although I've submitted 1 H + 1 M  + QA. But I'm pretty sure that H and M which I've submitted will be duplicate.
+
+{Reactions}
+❤️ 
+
+[04/25/2024 20:12] iwildsniperi
+Pray they are even valid
+
+{Reactions}
+🥹 
+
+[04/25/2024 20:16] slavcheww
+1236
+
+{Reactions}
+✅ (5) 
+
+[04/25/2024 20:20] t1moh
+You won btw
+
+
+[04/25/2024 20:24] theschnilch
+Great, now I'd like to win the contest 😄
+
+
+[04/25/2024 20:35] haxatron1
+We are so back!
+
+{Reactions}
+4739_Skeletor 
+
+[04/25/2024 20:48] iwildsniperi
+Only 50 max will be valid dw
+And 3 solo
+
+
+[04/25/2024 20:48] iwildsniperi
+Saw some contests get 300+ submissions to have 2 valids
+
+
+[04/25/2024 20:48] iwildsniperi
+Now wen results?
+
+
+[04/25/2024 20:50] haxatron1
+This is a dream 😂
+
+
+[04/25/2024 20:51] haxatron1
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image0-6AA4F.gif
+
+{Reactions}
+🥲 😂 
+
+[04/25/2024 20:52] iwildsniperi
+Bruv
+Never saw any protocol with 50+ vulns
+Its very small code too
+
+
+[04/25/2024 20:59] forgebyola
+Tapioca Dao had 100+ last year I think
+
+
+[04/25/2024 21:02] iwildsniperi
+100 different bugs?
+Or 100 valid reports
+
+
+[04/25/2024 21:03] iwildsniperi
+Is backstage opened for you guys?
+You see my findings now?
+
+
+[04/25/2024 21:03] forgebyola
+159
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/IMG_20240425_220225-399A8.jpg
+
+
+[04/25/2024 21:04] iwildsniperi
+Okey
+Wedding cancelled 
+Gg
+
+
+[04/25/2024 21:04] forgebyola
+This may be your ai arena/curve experience. We've all been there. Embrace it
+
+
+[04/25/2024 21:04] iwildsniperi
+Wdym
+
+
+[04/25/2024 21:04] jvorex
+dw about it. her family won't give her to someone else. next contest maybe 🥲
+
+
+[04/25/2024 21:05] iwildsniperi
+No man iam going to work in macdonald 
+They pay more than 1$ per week
+
+{Reactions}
+😂 (3) 
+
+[04/25/2024 21:07] haxatron1
+Hmm i think alot of people are not making more than $1 for this one 😂
+
+
+[04/25/2024 21:08] iwildsniperi
+This whole conversation is very exhausting 😭
+
+
+[04/25/2024 21:08] iwildsniperi
+Good bye to my whole life
+
+
+[04/25/2024 21:08] haxatron1
+Dw ive been there
+
+
+[04/25/2024 21:08] haxatron1
+You can ask any warden here
+
+
+[04/25/2024 21:08] iwildsniperi
+Wdym
+You still there😂
+
+
+[04/25/2024 21:09] haxatron1
+You can ask any warden here, they've made cents payout when they started.
+
+
+[04/25/2024 21:09] haxatron1
+Its a shared experience
+
+
+[04/25/2024 21:10] haxatron1
+Dont get discouraged its just jokes. At the same time pls dont get your hopes up...
+
+
+[04/25/2024 21:10] iwildsniperi
+Iam not complaining about starting as bad
+But where should be the opportunities if every is getting 1$
+
+
+[04/25/2024 21:10] iwildsniperi
+If i see top 5 eats well i get motivated
+
+
+[04/25/2024 21:10] iwildsniperi
+If even top 5 doesn't eat well
+This is exhausting
+
+
+[04/25/2024 21:11] forgebyola
+The opportunities really come when you get really good. The top guys would earn way more than those finding dupes every contest. So the target is just keep auditing, getting better and don't worry too much about payout at the beginning
+
+{Reactions}
+❤️ (2) ⬆️ 
+
+[04/25/2024 21:12] iwildsniperi
+Ye thats what iam searching for
+
+
+[04/25/2024 21:12] iwildsniperi
+Being top 5
+
+
+[04/25/2024 21:12] iwildsniperi
+And getting married
+
+
+[04/25/2024 21:12] forgebyola
+Sheesh I hope she can wait
+
+
+[04/25/2024 21:13] iwildsniperi
+she isnt there yet
+
+
+[04/25/2024 21:13] haxatron1
+Pls just focus on other audits for now
+
+{Reactions}
+❤️ 
+
+[04/25/2024 21:13] iwildsniperi
+iam just still in a dream
+
+
+[04/25/2024 21:13] iwildsniperi
+yes sir
+
+
+[04/25/2024 21:14] iwildsniperi
+so results will be in 1month + due to number of submissions right?
+
+
+[04/25/2024 21:14] _0xmax
+wedding canceled. cant afford wife
+
+{Reactions}
+😂 (5) 
+
+[04/25/2024 21:15] iwildsniperi
+my DMs are always open 😂
+
+
+[04/25/2024 21:15] _0xmax
+does anyone know what the record for submissions is
+
+
+[04/25/2024 21:15] _0xmax
+we like to beat records over at DYAD
+
+
+[04/25/2024 21:15] iwildsniperi
+1300 i think
+
+
+[04/25/2024 21:17] dimulski
+you are way below :D, I think it is arround 2100
+
+{Reactions}
+👆 (2) 
+
+[04/25/2024 21:17] dimulski
+what is this
+
+
+[04/25/2024 21:23] _paperparachute
+Hinging your future on your first audit is the kind of confidence I like to see!
+
+{Reactions}
+😂 (9) 💀 
+
+[04/25/2024 21:25] haxatron1
+I wouldnt encourage that kind of behaviour. It always turns out badly 😂
+
+
+[04/25/2024 21:25] iwildsniperi
+iam coming to stay
+
+
+[04/25/2024 21:26] iwildsniperi
+you will see my name more often on the leader board
+
+{Reactions}
+🔥 (5) 
+
+[04/25/2024 21:26] forgebyola
+That's the spirit
+
+{Reactions}
+❤️ (2) 
+
+[04/25/2024 21:30] josephdara
+Considering the submissions i just skimmed through, and the caliber of the participants . Hinging anything on this audit is slightly risky😂😂
+
+{Reactions}
+🥲 
+
+[04/25/2024 21:31] iwildsniperi
+https://tenor.com/view/no-more-go-t-sam-mercy-stop-gif-4954655
+
+{Embed}
+https://tenor.com/view/no-more-go-t-sam-mercy-stop-gif-4954655
+No more
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/no-more-go-t-97FA6.png
+
+
+[04/25/2024 21:31] iwildsniperi
+why am i caring?
+it only needs to be 1 solo and i get married
+its that easy
+
+
+[04/25/2024 21:32] josephdara
+Nah Ser. I believe in you. See you at the top
+
+{Reactions}
+❤️ (3) 
+
+[04/25/2024 21:32] brivan
+Another AiArena experience, ready for my $3 again
+
+{Reactions}
+😂 (2) 
+
+[04/25/2024 21:33] josephdara
+Gets me burger in my location 🫡🫡
+
+{Reactions}
+🫡 (2) 
+
+[04/25/2024 22:07] ehjc
+Thanks to you all 🙏
+
+{Reactions}
+❤️ 
+
+[04/25/2024 22:13] ehjc
+Great work 👀
+
+
+[04/25/2024 22:25] mylifechangefast.eth_70767
+It's about to go down!!
+
+{Reactions}
+🥲 
+
+[04/25/2024 22:26] mylifechangefast.eth_70767
+This shouldn't take long judging right?
+
+
+[04/25/2024 22:41] iwildsniperi
+less that month would be very skilfull judging
+
+
+[04/25/2024 23:07] irreverent.eth
+There is more submissions than SLOC?
+
+{Reactions}
+😂 (4) 
+
+[04/25/2024 23:11] mylifechangefast.eth_70767
+This would be great!!
+
+
+[04/25/2024 23:12] mylifechangefast.eth_70767
+Warden : 30 issues
+
+
+[04/25/2024 23:12] irreverent.eth
+this is my second audit... is this just really high turnout due to being the only audit for the week?
+
+
+[04/25/2024 23:29] iwildsniperi
+Where are my findings 
+It got disappeared 
+Does this means iam eating well?
+
+
+[04/25/2024 23:31] mctoady
+I hope your cupboards are fully stocked already my brother
+
+{Reactions}
+❤️ 
+
+[04/25/2024 23:32] iwildsniperi
+Thx
+But where are my findings 
+I like to stare at them
+
+
+[04/25/2024 23:33] iwildsniperi
+😂
+
+
+[04/25/2024 23:33] mctoady
+believe they're in the shadow realm until the report is released now
+
+{Reactions}
+❤️ (3) 
+
+[04/26/2024 00:39] itsabinashb
+What is the total number of participants??
+
+
+[04/26/2024 00:45] poeaudits
+You sit here while other people fight to invalidate your findings backstage without being able to defend them 🙂
+
+
+[04/26/2024 00:48] itsabinashb
+I think there are at least 3 finding everyone has, if there are 300 participants then we have 900 submission just here
+
+
+[04/26/2024 00:49] iwildsniperi
+Why they invalidate it?
+
+
+[04/26/2024 00:50] iwildsniperi
+Why the hate?
+
+
+[04/26/2024 00:50] poeaudits
+So they make more money. Every invalidation of someone else's finding means more money for them.
+
+
+[04/26/2024 00:52] iwildsniperi
+i know them and i will find them
+
+
+[04/26/2024 00:52] iwildsniperi
+they better stop it
+
+
+[04/26/2024 00:54] itsabinashb
+How much it may take to judge ? @PoeAudits , 2 weeks?
+
+
+[04/26/2024 00:55] poeaudits
+Varies, could be 2 weeks, could be 3 months.
+
+
+[04/26/2024 00:56] itsabinashb
+How many reports you submitted? @PoeAudits
+
+
+[04/26/2024 00:57] poeaudits
+Not sure if we are allowed to say.
+
+
+[04/26/2024 00:58] itsabinashb
+Do You know how many participants were there?
+
+
+[04/26/2024 00:59] poeaudits
+Nope.
+
+
+[04/26/2024 01:05] iwildsniperi
+how many issues in general
+
+
+[04/26/2024 01:05] iwildsniperi
+this you are allowed
+
+
+[04/26/2024 01:16] vad37
+Lots of issues than normal,  ~1.5 months wait
+
+
+[04/26/2024 01:27] poeaudits
+Gonna be a lot of out of scope issues due to the "ERC20 tokens behaviors in scope" section changing.
+
+{Reactions}
+❤️ (2) 👍 (3) 
+
+[04/26/2024 01:32] iwildsniperi
+thats what i like to see
+
+
+[04/26/2024 01:47] mctoady
+how many "fee on transfer tokens go brrr" issues can have been submitted?
+
+{Reactions}
+🤣 (6) 
+
+[04/26/2024 05:49] 0xarav
+Could someone link me to the public bot findings for this contest ?
+
+
+[04/26/2024 06:53] itsabinashb
+This is my first contest in C4, as  i am not in backstage is there any way for me to defend my findings? @kartoonjoy | C4🎇🎇 @PaperParachute
+
+
+[04/26/2024 07:13] donkicha
+@itsabinashb no, i think
+
+
+[04/26/2024 07:13] itsabinashb
+okay
+
+
+[04/26/2024 09:31] idarrha_adam
+i have backstage role i can defend on your behalf if your issues seem valid to me
+
+
+[04/26/2024 09:31] itsabinashb
+Hey, thank u so much Adam 🙂
+
+
+[04/26/2024 09:44] idarrha_adam
+anytime
+
+
+[04/27/2024 09:24] lionking927
+Is this contest finished and in judge step?
+
+
+[04/27/2024 09:51] aamirusmani1552
+Yes
+
+
+[04/27/2024 09:52] lionking927
+What's the estimation dates that judge ends?
+
+
+[04/27/2024 09:53] aamirusmani1552
+Can't say. There were around 1200 issue submitted total. 3 4 weeks I guess
+
+{Reactions}
+🔥 
+
+[04/27/2024 09:53] lionking927
+how many hm issues among them?
+
+
+[04/27/2024 11:33] xyzbtchunt
+:this:
+
+
+[04/27/2024 23:56] iwildsniperi
+my findings are good too but report quality i think not that good
+first contest ever
+get my back from people attacking my findings❤️
+
+{Reactions}
+🔥 
+
+[04/28/2024 17:02] brivan
+No one will attack your findings. If someone sees that an issue is wrongly judged, he will just highlight it to the judge **with evidences and proofs**. If not he, will get warnings or even will be removed from backstage access. 
+There are rules for escalating, and the judge has always the final decision. No need to worry.
+
+{Reactions}
+✅ (4) 
+
+[04/28/2024 21:41] mylifechangefast.eth_70767
+I just remembered some findings I didn't submit😭
+
+{Reactions}
+🥲 
+
+[04/28/2024 22:12] iwildsniperi
+Try @audit tags friend
+
+{Reactions}
+✅ 
+
+[04/29/2024 04:50] arkan2245
+Hi @shafu, I know the audit is over but I have a question out of curiosity. In `UnboundedKerosineVault::assetPrice()` there is the following:
+```
+uint numerator   = tvl - dyad.totalSupply();
+uint denominator = kerosineDenominator.denominator();
+return numerator * 1e8 / denominator;
+```
+What does 1e8 represent here?
+
+
+[04/29/2024 04:53] bigsam0831
+Probably a price multiplier since price is also scaled down by this factor when assetprice is used
+
+
+[04/29/2024 08:44] jes16jupyter
+oracle price has 8 decimals i guess.
+
+
+[04/29/2024 08:55] arkan2245
+I noticed a lot of people think it's different things. Hopefully I can summon @shafu to get the answer
+
+
+[04/29/2024 09:20] kmm77
+numerator is 18 decimals * another 8 decimals will be 26 decimals. 
+Then divide it by another 18, since the denominator( Kerosene) has 18 decimals, which will return the price in 8 decimals.
+
+
+[04/29/2024 09:21] kmm77
+Basically used, to make the `assetPrice()` function return with precision of 8 decimals, since all of the other vaults return in 8 decimals, because of the oracle
+
+
+[04/29/2024 09:32] itsabinashb
+today
+
+{Reactions}
+🧢 
+
+[04/29/2024 09:39] itsabinashb
+yes
+
+
+[04/29/2024 15:05] idarrha_adam
+i got you hh
+
+{Reactions}
+❤️ 
+
+[04/30/2024 06:12] xkeywordx
+Guys, while the competition is in this stage, is there a way for us, wardens to see what the judge thinks of our submissions?
+
+
+[04/30/2024 06:14] xkeywordx
+I'm interested to know if a judge invalidates my finding, and why is that happening, what was the reason?
+
+{Reactions}
+🤟🏻 
+
+[04/30/2024 06:56] poeaudits
+You need backstage access
+
+
+[04/30/2024 06:58] auditor_79099
+how to access backstage?
+
+
+[04/30/2024 08:02] tigerfrake
+First you gotta get certified, then you need to meet some qualifications for it.
+
+
+[04/30/2024 08:03] tigerfrake
+See this 👉 https://discord.com/channels/810916927919620096/810931711609143326/1232069551123071046
+
+
+[05/01/2024 13:59] mylifechangefast.eth_70767
+https://tenor.com/view/why-gif-23768806
+
+{Embed}
+https://tenor.com/view/why-gif-23768806
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/why-7697F.png
+
+
+[05/01/2024 15:04] iwildsniperi
+wen?
+
+
+[05/01/2024 15:04] iwildsniperi
+any backstage people update us?
+
+
+[05/01/2024 15:40] alix40
+If U get a solo finding on this contest better write it on Ur tombstone xD
+
+{Reactions}
+😂 (2) 
+
+[05/01/2024 15:52] brivan
+Probably end of next week, but you better not hope too much
+
+{Reactions}
+❤️ 
+
+[05/01/2024 15:53] iwildsniperi
+that was fast compared to submissions if so
+
+
+[05/01/2024 15:56] brivan
+Lookout groups similar issues together. Sponsors do not have to go over each submission, so you might get it so far that number of dups is crazy.
+
+{Reactions}
+🔥 
+
+[05/01/2024 15:59] iwildsniperi
+okey thx friend
+
+
+[05/01/2024 16:35] mylifechangefast.eth_70767
+Can wait to see $3
+
+{Reactions}
+😂 (5) 
+
+[05/02/2024 02:13] iwildsniperi
+it will be lower
+
+{Reactions}
+😂 (3) 💀 
+
+[05/02/2024 10:27] xkeywordx
+Who cares about the money here? I just want to get my first valid findings in a real competition, lol
+
+{Reactions}
+🫡 (5) 👀 (2) 👍 (2) 
+
+[05/02/2024 10:34] no.one7777
+when will the results be out
+
+
+[05/02/2024 19:31] tigerfrake
+Here sir! Lmao
+
+
+[05/02/2024 20:15] xkeywordx
+I'm kidding. Ofc we all care about money. My statement was more like "Considering my current level of experience today, I don't care about money, all I care about is having my first valid findings in a real competitive audit"
+
+
+[05/02/2024 20:16] xkeywordx
+After I'll accrue a couple of these, I will start seeking more money. Right now I seek experience, and if I can make some money, that'd be great
+
+{Reactions}
+🤝 (6) ✅ (3) 
+
+[05/03/2024 01:40] 100proof
+Great clarification. It can sometimes pay to be explicit about our motivations.
+
+{Reactions}
+👍 (2) 
+
+[05/03/2024 06:45] alix40
+I mean who needs money, everyone knows rich people are evil (preparing myself mentally for the payout of 10+ submissions)
+
+
+[05/03/2024 06:46] xkeywordx
+:))
+
+
+[05/03/2024 07:28] alix40
+Jokes aside don't even bother thinking about payout in the first 6 Months or u will want to quit early. Keep on pushing ur time will come !
+
+{Reactions}
+👍 (2) 
+
+[05/03/2024 07:53] iwildsniperi
+this is the way to let me leave the space
+
+{Reactions}
+😂 
+
+[05/03/2024 07:53] iwildsniperi
+first 6 months lol?
+
+
+[05/03/2024 08:04] alix40
+It of course varies from person to person. But i am sorry to break it out to you, it is not a get rich quick scheme 😂
+
+
+[05/03/2024 08:05] iwildsniperi
+its still not a medicine roadmap of 10 years
+i can afford this for sure\
+
+{Reactions}
+🫡 
+
+[05/03/2024 08:07] alix40
+rooting for u, hope u crush it !
+
+{Reactions}
+❤️ 
+
+[05/03/2024 09:33] xkeywordx
+From what I've seen competitive audits are a lot harder than private audits. Ofc, it depends on the protocol that you audit privately.
+
+
+[05/03/2024 09:34] iwildsniperi
+getting your name to be booked privately are through dominating audits though
+this is the roadmap for nonreffered non employed auditor
+
+{Reactions}
+👍 
+
+[05/03/2024 09:36] xkeywordx
+I've seen not so good auditors being booked for private audits because they have good marketing.
+
+But I agree, if you are able to put your name on the C4 leaderboard than ur chances of getting booked privately should go up
+
+{Reactions}
+✅ (3) 
+
+[05/03/2024 09:39] iwildsniperi
+any way,
+more time should be added to dominate as a researcher
+space is still very early and alot of integrations are popping
+iam considered to be behind due to not learning about layer zero and eigen
+but will soon for sure
+
+{Reactions}
+10_10 
+
+[05/05/2024 02:41] iwildsniperi
+https://tenor.com/view/wen-creepz-wenfinity-wenwenwen-creepz-wen-gif-25738654
+
+{Embed}
+https://tenor.com/view/wen-creepz-wenfinity-wenwenwen-creepz-wen-gif-25738654
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/wen-creepz-A45EA.png
+
+
+[05/05/2024 02:42] iwildsniperi
+Any update from our seniors?
+Dont laugh on me but i keep getting dreams of a solo
+
+{Reactions}
+😂 (9) 
+
+[05/05/2024 06:10] _3doc_
+The longer it takes, the longer one can dream 💭
+
+{Reactions}
+😂 (4) 
+
+[05/05/2024 08:07] tigerfrake
+Let's give it another one week sir! Lol
+
+{Reactions}
+🥲 
+
+[05/05/2024 09:04] itsabinashb
+nice 😄
+
+
+[05/05/2024 11:45] iwildsniperi
+are you the judge?
+
+{Reactions}
+no (2) 
+
+[05/05/2024 15:10] mylifechangefast.eth_70767
+He is br... Don't be deceived 😆
+
+{Reactions}
+🥲 
+
+[05/05/2024 15:12] iwildsniperi
+what is br?
+
+
+[05/05/2024 15:13] mylifechangefast.eth_70767
+Brother 👀
+
+{Reactions}
+🥲 
+
+[05/05/2024 15:14] iwildsniperi
+i just want to get married man 
+where is my 5k$ ?
+
+{Reactions}
+😂 (3) 
+
+[05/05/2024 15:22] mylifechangefast.eth_70767
+On it dstchain :andbang:
+
+{Reactions}
+❤️ 
+
+[05/05/2024 15:26] itsabinashb
+How old are you?
+
+
+[05/05/2024 15:26] iwildsniperi
+nearing 23
+iam getting really old
+
+
+[05/05/2024 15:26] iwildsniperi
+needs to have some kids
+
+{Reactions}
+😂 (4) 
+
+[05/05/2024 15:26] mylifechangefast.eth_70767
+Oh gawd!!
+
+{Reactions}
+😂 
+
+[05/05/2024 15:27] mylifechangefast.eth_70767
+I'm 19:chefskiss:
+
+{Reactions}
+❤️ 
+
+[05/05/2024 15:27] iwildsniperi
+and not married yeT?
+
+
+[05/05/2024 15:27] iwildsniperi
+gg to this world
+
+
+[05/05/2024 15:29] mylifechangefast.eth_70767
+Married.. I'm married to web3
+
+{Reactions}
+😂 (2) 
+
+[05/06/2024 07:11] iwildsniperi
+https://tenor.com/view/space-nation-spacenationol-spacenationolnft-gif-5697587515974543331
+
+{Embed}
+https://tenor.com/view/space-nation-spacenationol-spacenationolnft-gif-5697587515974543331
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/space-nation-spacenationol-9ACBD.png
+
+{Reactions}
+😄 (2) 
+
+[05/06/2024 08:57] brivan
+Patience.
+Next week
+
+{Reactions}
+🥲 
+
+[05/06/2024 08:58] iwildsniperi
+For real?
+
+
+[05/06/2024 08:58] brivan
+I believe so.
+The judge had already started validating/invalidating issues
+
+{Reactions}
+❤️ (4) 
+
+[05/06/2024 11:00] mylifechangefast.eth_70767
+Nice!!!
+
+
+[05/06/2024 11:01] mylifechangefast.eth_70767
+I need that money for a Porsche👀
+
+{Reactions}
+😂 (3) 
+
+[05/06/2024 11:31] aripse
+You won’t find bug faster with it though. 😁
+
+{Reactions}
+😂 
+
+[05/06/2024 11:32] mylifechangefast.eth_70767
+At least it can speed up my audit rate🥲
+
+
+[05/06/2024 11:43] aripse
+Only thing really relevant to speeding up your audit rate is practicing and keeping up-to-date with vulnerabilities. Going shopping faster won’t really change anything. When brain need a pause, a fast car doesn’t rest him better. 😄
+
+{Reactions}
+👊 (2) 😂 (2) 
+
+[05/06/2024 12:32] mylifechangefast.eth_70767
+It's just big me, nigga bam😂
+
+
+[05/07/2024 05:25] xkeywordx
+Wow you got on the Leaderboard? Congrats
+
+
+[05/07/2024 11:03] aripse
+Which leaderboard ?
+
+
+[05/07/2024 11:16] xkeywordx
+C4 leaderboard. You have a leaderboard role 🙂
+
+{Reactions}
+😮 (2) 
+
+[05/07/2024 11:29] aripse
+Wow, I didn’t notice it! lol
+Thank you. 😄
+
+
+[05/07/2024 11:30] aripse
+Don’t know criterias to get that role though.
+
+
+[05/07/2024 17:15] iwildsniperi
+Criteria is in the name
+
+
+[05/07/2024 19:53] aripse
+You mean even if you’re the last of the leaderboard, you would have it ?
+
+
+[05/07/2024 19:54] iwildsniperi
+Yes😂
+
+{Reactions}
+😂 
+
+[05/08/2024 00:58] vizay315
+hey man, some where in the past u get into leader-board
+
+
+[05/08/2024 19:03] iwildsniperi
+you know what
+
+
+[05/08/2024 19:03] iwildsniperi
+its wen time
+
+
+[05/08/2024 19:03] iwildsniperi
+https://tenor.com/view/when-wen-naru-yummi-yummi-universe-gif-23030317
+
+{Embed}
+https://tenor.com/view/when-wen-naru-yummi-yummi-universe-gif-23030317
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/when-wen-6E23F.png
+
+
+[05/08/2024 19:07] brivan
+Not anytime before the end of next week. Patience my friend.
+
+
+[05/08/2024 19:13] iwildsniperi
+okey
+
+
+[05/08/2024 21:41] forgebyola
+Most findings have like 100+ dupes. I don't think anybody should be anxious with this one. So as not to get disappointed👍🏼
+
+{Reactions}
+👍 (5) 
+
+[05/08/2024 21:59] xkeywordx
+You know that for a fact or you just assume?
+
+
+[05/08/2024 22:01] forgebyola
+matter of fact
+
+{Reactions}
+👍 (2) 🥲 
+
+[05/08/2024 22:22] iwildsniperi
+most but not all
+so i still feel my solo😂
+
+{Reactions}
+😂 (4) 👍🏻 
+
+[05/09/2024 08:18] mylifechangefast.eth_70767
+You never see anything
+
+
+[05/11/2024 05:00] iwildsniperi
+You still think its at the end of this week or it may take longer?
+
+
+[05/11/2024 06:55] aripse
+"end of next week" he said
+
+
+[05/11/2024 11:01] iwildsniperi
+This was last week
+
+
+[05/11/2024 11:08] aripse
+?? It was literally this Wednesday. lol
+End of next week is 16th-17th May.
+
+
+[05/11/2024 11:09] iwildsniperi
+Bruh Wednesday is still last week
+
+
+[05/11/2024 11:09] iwildsniperi
+Friday is the end of the week
+
+
+[05/11/2024 11:09] aripse
+Moreover don’t waste time asking "Wen" there is a lot of audit out there which need you!
+
+{Reactions}
+❤️ (2) 
+
+[05/11/2024 11:09] iwildsniperi
+Roger🫡
+
+
+[05/11/2024 11:10] iwildsniperi
+Its just cause of it being my first audit
+
+
+[05/11/2024 11:12] aripse
+Yup, I guessed it, I was like you but after my first results I understood I had no time to waste to be better. 😉
+You’ll learn patience like all people here. The best advice I can give is once you’ll conduct 4-5 audits in a raw , you’ll have results every weeks. It helps for patience. 😄
+
+{Reactions}
+❤️ (2) 
+
+[05/11/2024 11:12] iwildsniperi
+Thx❤️
+
+
+[05/11/2024 21:06] brivan
+Yes. Few issues left. Few more days. This week I mean 17th
+
+{Reactions}
+❤️ 
+
+[05/11/2024 21:07] iwildsniperi
+Thx and sorry for your efforts❤️
+
+
+[05/11/2024 21:07] brivan
+Someone getting a unique here will get all the prize pool
+
+
+[05/11/2024 21:08] brivan
+Crazy number of $1 payouts are coming
+
+{Reactions}
+😄 (4) 🤣 (6) 
+
+[05/11/2024 21:37] iwildsniperi
+Thx for letting me know that my solo is validated😂
+
+{Reactions}
+🙈 (5) 😂 (10) 
+
+[05/13/2024 15:16] iwildsniperi
+i am getting famous
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/image-56FE9.png
+
+{Reactions}
+rocketship (4) 
+
+[05/13/2024 18:11] vasil_sariev
+Yeah, it better be a solo for real
+
+
+[05/13/2024 18:15] haxatron1
+For your sake, I hope you get backstage soon
+
+
+[05/13/2024 18:44] iwildsniperi
+Just having fun in spare time
+But really backstage or 'SR' would be of great benefit to drin the valid bugs in a fresh way and know how judges do their work
+
+{Reactions}
+👍 (3) 
+
+[05/13/2024 18:44] iwildsniperi
+Dont worry guys iam doing other contests 
+Its just me in first contest discord channel doing a psychopath stuff
+
+{Reactions}
+😂 (3) 
+
+[05/14/2024 01:29] 0xellipticcurve
+ok ok, but wen???? (jk!!!!!!!!!!)
+
+
+[05/14/2024 09:06] brivan
+Few QA reports lefts, then PJQA will start.
+
+{Reactions}
+❤️ (3) 
+
+[05/14/2024 13:09] 0xellipticcurve
+🙏🏼
+
+
+[05/15/2024 20:36] banditx0x
+https://twitter.com/shafu0x/status/1782487036013760693?t=YKBrty8cy6rjsadHRiFj_A&s=19 Reposting now that PJQA is open. I wonder of the army of average auditors found anything :4739_Skeletor:
+
+{Embed}
+https://twitter.com/shafu0x/status/1782487036013760693?t=YKBrty8cy6rjsadHRiFj_A&s=19
+shafu (@shafu0x) on X
+One genius Auditor is worth more than a legion of average Auditors.
+Twitter
+
+{Reactions}
+😂 (14) 
+
+[05/15/2024 20:40] iwildsniperi
+sirrrrrrrrrrrrrr
+you still remember?
+
+{Reactions}
+😆 (2) 
+
+[05/15/2024 20:40] brivan
+Unfortunately there's no genius auditor who found a unique, just crazy amount of dups by average auditors 🙂
+
+{Reactions}
+🥲 (6) 
+
+[05/15/2024 20:51] dimulski
+there is still time for everything to get invalidated 🧠
+
+{Reactions}
+😂 
+
+[05/15/2024 20:55] iwildsniperi
+dont fade my solo
+
+
+[05/15/2024 20:59] iwildsniperi
+bruh maybe we are all genius bruh
+dont forget the code was audited previously by a genuis auditor
+
+
+[05/15/2024 21:35] forgebyola
+We're never letting this slide I see
+
+
+[05/15/2024 22:55] 0xellipticcurve
+HAHAHAHHAHAHA
+
+
+[05/16/2024 06:07] dimulski
+escalations are going to be fun for this one 😄
+
+
+[05/16/2024 06:28] 0xdemonnn
+Gonna be a long day :chefskiss:
+
+
+[05/16/2024 06:31] dimulski
+more like a week 😄
+
+{Reactions}
+😂 (4) 
+
+[05/16/2024 06:31] marioyordanov
+are results posted somewhere?
+
+
+[05/16/2024 06:39] wanziskata
+bro is the definition of beef :4739_Skeletor:
+
+{Reactions}
+4739_Skeletor (2) 
+
+[05/16/2024 07:43] iwildsniperi
+https://tenor.com/view/wen-gif-24395886
+
+{Embed}
+https://tenor.com/view/wen-gif-24395886
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/wen-6A354.png
+
+{Reactions}
+😂 (3) 
+
+[05/16/2024 07:43] iwildsniperi
+escalations are for SRs only right?
+
+{Reactions}
+👍 (4) 10_10 
+
+[05/16/2024 09:21] t1moh
+Hm why?
+
+
+[05/16/2024 09:26] dimulski
+around 50 so far
+
+
+[05/16/2024 14:19] alexczm
+I'm not a big c4 'Escalator' but I have small prior experience from another you-know-which-one audit platform. and I hope c4 escalation will not became as same as toxic as on the other platform
+
+
+[05/16/2024 14:23] brivan
+No worries about this -so far-. C4 escalation is the clearest and most well-organized process among all other platforms.
+Generally, audits with huge participations -like this one- make it hard to resolve all escalations perfectly.
+
+
+[05/16/2024 14:27] alexczm
+thanks for your feedback. I agree, it's hard to resolve all escalations perfectly.
+
+
+[05/16/2024 14:51] iwildsniperi
+no one can be toxic in escalations
+he will kicked from the role
+
+
+[05/16/2024 14:52] iwildsniperi
+how many days escalations are estimated to be?
+
+
+[05/16/2024 14:54] xkeywordx
+I think you are the genius auditor that he refers to. The one that caught the solo High
+
+{Reactions}
+😂 
+
+[05/16/2024 14:55] iwildsniperi
+sadly there is no solo at all
+but thx for the complement😂
+
+
+[05/16/2024 14:55] iwildsniperi
+if no solo found then my unique got invalidated i think
+
+
+[05/16/2024 14:57] xkeywordx
+Do unique invalidations count too :))?
+
+
+[05/16/2024 14:57] iwildsniperi
+i will count it in my CV even if they don't
+
+{Reactions}
+👍 
+
+[05/16/2024 14:58] iwildsniperi
+can i communicate with SR role
+i want to clairfy my fiding and discuss with him if it can be defended
+
+
+[05/16/2024 15:20] brivan
+48 hours
+
+{Reactions}
+❤️ (2) 
+
+[05/16/2024 15:41] thefabled8702
+Are escalations only for people trying to defend their finding, or does it include trying to invalidate others?
+
+
+[05/16/2024 16:00] dimulski
+only invalidating, no defending allowed
+
+{Reactions}
+😂 (2) 
+
+[05/16/2024 16:55] cloudellie
+I assume you're being sarcastic?
+
+{Reactions}
+😂 (8) 
+
+[05/16/2024 18:27] mylifechangefast.eth_70767
+Oops
+
+
+[05/16/2024 20:31] wanziskata
+shafu is streaming atm, for anyone who hasn't got sr/backstage
+
+
+[05/16/2024 20:53] xkeywordx
+Is he explaining the bugs?
+
+{Reactions}
+✅ (3) 
+
+[05/16/2024 21:06] wanziskata
+yes, he went over the currently validated ones
+
+
+[05/16/2024 21:09] xkeywordx
+Any idea when we will be able to get the final results?
+
+
+[05/16/2024 21:13] joeyroth
+https://www.youtube.com/watch?v=BHdkZU1c1Yg
+
+{Embed}
+shafu
+https://www.youtube.com/watch?v=BHdkZU1c1Yg
+DYAD | Audit Report Review
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/maxresdefault_live-F42CB.jpg
+
+{Reactions}
+👍 
+
+[05/16/2024 22:31] mylifechangefast.eth_70767
+What I was hearing was valid valid😅
+
+{Reactions}
+🥲 😂 (2) 
+
+[05/17/2024 01:09] iwildsniperi
+Iam supposing that results are today
+
+
+[05/17/2024 01:09] iwildsniperi
+Since everything is done
+
+
+[05/17/2024 02:23] poeaudits
+Hmm, I see they changed the code to fix a bug I submitted, yet the bug report itself doesn't show up in the issues on shafu's stream.
+
+{Reactions}
+🤔 (3) 😂 
+
+[05/17/2024 02:55] iwildsniperi
+maybe the judge invalidated it and they think its valid
+
+
+[05/17/2024 05:48] dimulski
+Look mom, I am famous 😂😂
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/IMG_3024-3E4C0.jpg
+
+{Reactions}
+😎 (7) 🤣 (4) 
+
+[05/17/2024 06:55] oxtenma
+"People arguing with the Judge" lol
+
+
+[05/17/2024 07:03] lian0669
+May I ask, the escalation process is like Sherlock??  How does you know when to write commit?
+
+
+[05/17/2024 07:06] dimulski
+I guess you mean comment, it is pretty much the same with some nuances, here it is called PJQA and only sr can see the escalation, while in Sherlock it is called escalation period and everybody can see the escalations and comment (there are requirements for escalating)
+
+
+[05/17/2024 07:13] lian0669
+Yes comment. Thanks for answering me the question. It helps a lot
+dyad is my first contest on C4, lol
+
+{Reactions}
+❤️ 
+
+[05/17/2024 07:24] iwildsniperi
+same here bruh
+
+
+[05/17/2024 07:25] iwildsniperi
+wasnt best start to be honest
+missed quiet alot of low hanging stuff
+
+
+[05/17/2024 07:26] lian0669
+Yep
+
+{Reactions}
+❤️ 
+
+[05/17/2024 08:25] brivan
+PJQA ends today, and given the high number of escalations, I'd say it will require 3 more days to resolve all escalations. Probably Tuesday
+
+{Reactions}
+10_10 (3) 
+
+[05/17/2024 09:46] 0xauditism
+optimistic
+
+{Reactions}
+👆 
+
+[05/17/2024 12:25] marioyordanov
+how to make an escalation?
+
+
+[05/17/2024 13:00] theschnilch
+You must have the SR role to have access to the Findings Repository to be able to make escalations there
+
+
+[05/17/2024 22:43] poeaudits
+Nah, dimulski probably got to it first lol. Doubt it was a solo but who knows.
+
+
+[05/17/2024 22:47] iwildsniperi
+Its not first sir
+
+
+[05/17/2024 22:47] iwildsniperi
+If you have same root cause they chose best report to show to sponser
+
+
+[05/17/2024 22:49] poeaudits
+None of the reports I saw on stream could be considered duplicates of my issue.
+
+{Reactions}
+🥲 (2) 
+
+[05/17/2024 23:33] iwildsniperi
+Sad
+
+
+[05/17/2024 23:39] poeaudits
+At least they fixed the issue in the code from what I could see.
+
+{Reactions}
+🥲 (4) 
+
+[05/18/2024 07:58] forgebyola
+what was the issue?
+
+
+[05/18/2024 20:35] poeaudits
+I believe its against C4 rules to say anything before the report is published.
+
+{Reactions}
+👍 (3) 
+
+[05/19/2024 04:24] 0xabhay.
+The PJQA has ended, but the judge did not give a response to anyone. What does it mean?
+
+{Reactions}
+🥲 
+
+[05/19/2024 04:32] iwildsniperi
+@auditism
+
+{Reactions}
+4739_Skeletor 
+
+[05/19/2024 04:34] 0xabhay.
+I think the judge is on vacation
+
+
+[05/19/2024 04:35] iwildsniperi
+no way he is
+
+
+[05/19/2024 04:35] iwildsniperi
+maybe all QA are simply rejected?
+
+
+[05/19/2024 04:36] 0xabhay.
+Without any response
+
+
+[05/19/2024 04:37] 0xabhay.
+Judges have to give a reason to reject a finding
+
+
+[05/19/2024 04:38] iwildsniperi
+don't know at all🥲 
+this is simply my first contest
+and iam dying to see the results
+need to get some boosts
+
+{Reactions}
+🫡 (2) 
+
+[05/19/2024 05:53] tigerfrake
+Soon you'll have `sr` role. That shit scary, lol.
+
+
+[05/19/2024 05:55] iwildsniperi
+its better to be soon
+
+
+[05/19/2024 05:56] tigerfrake
+Well, just a few valid findings here n there and you're good to go.
+
+{Reactions}
+🫡 (3) 
+
+[05/19/2024 10:22] iwildsniperi
+https://tenor.com/view/if-not-now-when-act-now-save-the-earth-bold-action-for-climate-care-gif-21161468
+
+{Embed}
+https://tenor.com/view/if-not-now-when-act-now-save-the-earth-bold-action-for-climate-care-gif-21161468
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/if-not-now-when-act-now-99A37.png
+
+{Reactions}
+😂 (5) 
+
+[05/19/2024 10:35] tigerfrake
+If you're working on another contract while waiting for results it  never feels like forever. Lol
+
+
+[05/19/2024 10:37] iwildsniperi
+I actually dont know how could have i done renzo during waiting
+
+
+[05/19/2024 10:39] iwildsniperi
+I think any contest before dyad results will be low quality
+
+
+[05/19/2024 10:39] iwildsniperi
+Gimme those SR role man
+
+
+[05/19/2024 10:41] tigerfrake
+They're earned. Lmao
+
+
+[05/19/2024 10:42] unclejeff4407
+What's SR?
+
+
+[05/19/2024 10:45] iwildsniperi
+i know
+
+
+[05/19/2024 10:45] iwildsniperi
+but it needs some time for valid issues reports
+
+
+[05/19/2024 10:46] iwildsniperi
+its been 1 month now since my first contest
+
+
+[05/19/2024 10:46] iwildsniperi
+imagine renzo is another 1 month
+
+
+[05/19/2024 10:46] iwildsniperi
+those are decades in my opiniion
+
+
+[05/19/2024 10:46] iwildsniperi
+i mean till results come and role earning
+
+
+[05/19/2024 11:47] shubh0412
+Dnt expect this upcoming week. Most probably the week after that.
+
+{Reactions}
+🧐 4739_Skeletor (4) 
+
+[05/19/2024 12:01] iwildsniperi
+the code is small and taking one month and half?
+
+
+[05/19/2024 12:01] iwildsniperi
+you mean 2 weeks ahead from now?
+
+
+[05/19/2024 12:09] shubh0412
+Around 27th May most probably but not this week
+
+
+[05/19/2024 12:10] iwildsniperi
+okey thx so much
+
+
+[05/19/2024 12:11] forgebyola
+Alot of submissions and alot of escalations. It's expected
+
+{Reactions}
+🥲 (2) 
+
+[05/19/2024 13:04] aripse
+Judging time doesn't depend on the code size but the submission number.
+
+{Reactions}
+🥲 (3) 
+
+[05/20/2024 04:09] 0x77_eth
+wen winner
+
+
+[05/20/2024 09:03] iwildsniperi
+Leakage of results
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/remix-731a2a96-460b-47a9-863d-ec3405fbfdbc-B72F2.png
+
+{Reactions}
+😂 (12) 
+
+[05/20/2024 09:04] iwildsniperi
+Dont thank me
+
+
+[05/20/2024 09:41] myrault_
+Results today?
+
+{Reactions}
+NOPERS (3) 
+
+[05/20/2024 10:50] brivan
+Judge didn't even start looking at comments.
+It is taking longer
+
+
+[05/20/2024 10:52] haxatron1
+Most optimistic outcome
+
+
+[05/20/2024 10:52] haxatron1
+I dont think alot of people are earning more than that payout unfortunately
+
+
+[05/20/2024 11:32] forgebyola
+Judge on a little vacation?
+
+{Reactions}
+😂 
+
+[05/20/2024 11:32] forgebyola
+Gathering energy for the escalation war
+
+
+[05/20/2024 11:33] forgebyola
+Please don't lower hopes, hopes must be kept high for true character development
+
+{Reactions}
+😂 (5) 
+
+[05/20/2024 13:27] tamayonft
+See you all in two weeks
+
+
+[05/20/2024 13:41] mctoady
+You find out how much people really want it after they wait a month for the `@username $0.01` notification
+
+{Reactions}
+4739_Skeletor 
+
+[05/20/2024 14:46] 0xleadwizard
+It's not about the money, it's about the username lol
+
+{Reactions}
+👍 (2) 
+
+[05/20/2024 15:00] brivan
+Chill out, the judge is back
+
+{Reactions}
+❤️ (6) 
+
+[05/21/2024 12:36] itsabinashb
+Hi, any update in backstage?
+
+
+[05/21/2024 13:13] brivan
+Judge is going through comments.
+
+{Reactions}
+👍 (3) 
+
+[05/23/2024 12:33] kennedybailey
+When result?
+
+
+[05/23/2024 13:34] aripse
+According to the backstage, I would say not before the next week, lead judge still has a lot of work with PJQA.
+
+
+[05/23/2024 14:14] 0x77_eth
+too long time
+
+
+[05/23/2024 14:29] aripse
+Too many vulnerabilities and submissions about them. 😁
+
+
+[05/26/2024 16:05] itsabinashb
+Is there any possibility to get the result and reward next week ?
+
+{Reactions}
+👎 (4) 
+
+[05/26/2024 20:29] mylifechangefast.eth_70767
+About the result not sure.
+
+{Reactions}
+❤️ 
+
+[05/26/2024 22:18] blckhv
+https://tenor.com/view/10years-is-long-enough-to-wait-the-history-guy-decade-too-long-i-dont-want-to-wait-gif-19155213
+
+{Embed}
+https://tenor.com/view/10years-is-long-enough-to-wait-the-history-guy-decade-too-long-i-dont-want-to-wait-gif-19155213
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/10years-is-long-enough-to-wait-the-history-D231D.png
+
+{Reactions}
+🤣 (8) 
+
+[05/27/2024 15:13] yotov721
+Hi, to somebody who has more experience in PJQA, should this have a `duplicate-67` label since the judge confirmed it is a dup of #67, but did not add a label ? https://github.com/code-423n4/2024-04-dyad-findings/issues/918
+
+
+[05/27/2024 15:16] xkeywordx
+I can not open the link
+
+
+[05/27/2024 15:16] yotov721
+you would need SR/backstage role
+
+
+[05/27/2024 15:17] xkeywordx
+I figured. I was on my phone. I just clicked to open thinking that the results are published
+
+
+[05/27/2024 20:40] infectedfuture
+this is correct, judge should add the label when he's back
+
+
+[05/27/2024 20:42] yotov721
+Tnx. I've written a message in the PJ QA discussion: https://github.com/code-423n4/2024-04-dyad-findings/discussions/1315#discussioncomment-9573336 . Hope this is enough 🙂 Don't want to bother him.
+
+
+[05/27/2024 20:52] infectedfuture
+No worries, even after results are out, if you notice a mistake, it is still possible to make a change 👌🏼 happened to me once
+
+{Reactions}
+👍 
+
+[05/27/2024 20:53] infectedfuture
+Just need to act quickly though, before rewards are sent out
+
+
+[05/28/2024 06:26] itsabinashb
+Who is with accepted issues?
+
+
+[05/28/2024 12:01] aamirusmani1552
+What do you mean?
+
+
+[05/28/2024 12:06] itsabinashb
+Sorry, it is who is with maximum accepted issues
+
+
+[05/28/2024 12:58] itsabinashb
+Any idea when the result will be announced?
+
+
+[05/28/2024 13:23] dimulski
+the hour is 22:33 GMT +3, but the date is not clear yet
+
+{Reactions}
+🔥 (3) 👀 
+
+[05/28/2024 13:27] mctoady
+https://tenor.com/view/prophecy-says-mace-windu-mace-windu-prophecy-gif-22874085
+
+{Embed}
+https://tenor.com/view/prophecy-says-mace-windu-mace-windu-prophecy-gif-22874085
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/prophecy-says-mace-windu-mace-windu-4257A.png
+
+
+[05/28/2024 14:38] aamirusmani1552
+i don't think there is a way to know before the result. unless you make your own list lol
+
+
+[05/28/2024 17:15] dimulski
+https://tenor.com/view/i-am-the-chosen-one-chosen-one-special-its-me-pick-me-gif-15183525
+
+{Embed}
+https://tenor.com/view/i-am-the-chosen-one-chosen-one-special-its-me-pick-me-gif-15183525
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/i-am-the-chosen-one-chosen-one-EDC05.png
+
+
+[05/28/2024 17:23] karl_38410
+btw what is the current progress?
+
+
+[05/28/2024 17:33] brivan
+Almost done, results may be this Thursday/Friday or early beginning of next week
+
+
+[05/28/2024 17:33] brivan
+PJQA was crazy for this one.
+
+
+[05/28/2024 17:34] dimulski
+https://tenor.com/view/pauly-shore-pauly-shore-movie-stanley-tucci-cant-you-see-theres-no-hope-environmentalism-gif-17036717
+
+{Embed}
+https://tenor.com/view/pauly-shore-pauly-shore-movie-stanley-tucci-cant-you-see-theres-no-hope-environmentalism-gif-17036717
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/pauly-shore-pauly-shore-movie-D5B90.png
+
+
+[05/28/2024 17:35] brivan
+#343 clutched the game at last minutes
+
+
+[05/28/2024 19:22] itsabinashb
+what is the issue?
+
+
+[05/28/2024 19:31] brivan
+Has the least amount of dups, will dominate the prize pool
+
+
+[05/28/2024 19:43] ljj
+👀
+
+
+[05/28/2024 20:01] xkeywordx
+The judging for a 457 sloc codebase lasted 1 month and a half, I can't think of how much time it takes to get the results for Renzo at 4000 sloc :))
+
+
+[05/28/2024 20:05] ljj
+Its not only about sloc, it probably doesn't impact the judge too much
+
+
+[05/28/2024 20:07] brivan
+It'sn ot about the sloc. It's about the number of submissions
+
+
+[05/28/2024 20:08] brivan
+And this contest particularly was tricky on judging, there are some issues that are merged, some issues that are split.
+
+
+[05/28/2024 20:21] 0xauditism
+is it too late to add a comment ?
+
+
+[05/28/2024 20:25] t1moh
+Much less
+
+
+[05/28/2024 20:27] forgebyola
+Its funny how I thought the idea of #343 was basically just a design decision and didn't go further with that
+
+
+[05/28/2024 20:28] 0xauditism
+good find
+
+
+[05/28/2024 20:32] forgebyola
+Even the least duped has like 6 dupes
+
+
+[05/28/2024 20:33] ljj
+Is that #343 with 6 dupes?
+
+
+[05/28/2024 20:34] forgebyola
+Still, good find. Seems obvious now
+
+
+[05/28/2024 21:02] alexczm
+i still don't see how it's an issue 🙈 
+Maybe I need to read the issue with a fresh mind but imo the liquidator gets the corresponding exo collateral, unbounded kerosene and bounded kerosene which has a 2x value. he can use that bounded kerosene (at a 2x value) to mint stable Dyad
+
+
+[05/28/2024 21:24] brivan
+Friendly reminder of not discussing issue publicly until the report is out
+
+{Reactions}
+👍 (4) thankyou 
+
+[05/28/2024 21:36] itsmetechjay
+ℹ️ The judge is actively working to get this one wrapped up soon.  We appreciate your patience.
+
+
+[05/28/2024 21:36] alexczm
+Thank you for reminder. Indeed, I rushed to comment about an issue. I did it only for educational purpose.
+
+
+[05/28/2024 21:41] forgebyola
+You can comment on github I think
+
+
+[05/28/2024 21:49] alexczm
+1. PJQA ended long ago, even if some ppl commented without being  asked to do so.
+2. I don't want to prolong the judging phase. I believe the judge has enough context to make the right decision. 
+I just want to have a constructive discussion to understand other ppl's  POV regarding different issues/ why they think those are valid issues.
+
+
+[05/28/2024 23:18] lian0669
+can we  see the result now?
+
+
+[05/28/2024 23:33] tychaios.
+No
+
+
+[05/28/2024 23:44] smart_27
+when final result?
+
+
+[05/29/2024 01:27] tamayonft
+Soon
+
+
+[05/29/2024 02:31] 0xdemonnn
+so excited, can't wait to get 1 cent as a reward :4739_Skeletor:
+
+{Reactions}
+😂 (3) 
+
+[05/29/2024 03:45] tigerfrake
+Lmao
+
+
+[05/29/2024 12:32] 0xarav
+Yea , give me my $0.01
+
+{Reactions}
+😂 (7) 🥲 
+
+[05/29/2024 17:47] brivan
+Today or tomorrow
+
+{Reactions}
+🔥 (3) 
+
+[05/29/2024 17:51] 0xabhay.
+Finally
+
+
+[05/29/2024 18:25] shubh0412
+Logo updated. Should be soon.
+
+{Reactions}
+🤤 (2) 
+
+[05/29/2024 18:57] josephdara
+I’m sure i got at least $2 :4739_Skeletor:
+
+
+[05/29/2024 19:01] al_qa_qa
+Guys the findings results has been put into the profile. Your earnings has been added into your balance.
+
+You can check LeaderBoard and you will get that your total balance increased by the amount you earned from that context.
+
+{Reactions}
+💯 (10) 😎 (2) ❤️ (2) 
+
+[05/29/2024 19:17] volokinn
+Or you can check the contest page - https://code4rena.com/audits/2024-04-dyad
+
+{Reactions}
+❤️ 👍 
+
+[05/29/2024 19:18] dimulski
+sneaky attack, when did all of the issues get resolved
+
+{Reactions}
+😂 
+
+[05/29/2024 19:18] dimulski
+congrats @Al-Qa-qa
+
+{Reactions}
+👍 
+
+[05/29/2024 19:18] bbl4de.xyz
+wdym?
+
+
+[05/29/2024 19:19] dimulski
+I mean I was arguing with the judge 3 hours ago, and now results are out I mean this is pretty fast and not typically how things go 😄
+
+{Reactions}
+❤️ 
+
+[05/29/2024 19:23] 0xarmedgoose
+meawhile wardens thinking why all other people had to report all those duplicates
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/allies-CEDA9.png
+
+
+[05/29/2024 19:25] iwildsniperi
+got 4.8 for 1 high and 1 medium
+
+{Reactions}
+❤️ 
+
+[05/29/2024 19:25] iwildsniperi
+not bad start
+
+{Reactions}
+🔥 (6) 
+
+[05/29/2024 19:32] al_qa_qa
+Wow, this is better 😂
+
+
+[05/29/2024 19:33] al_qa_qa
+Thanks a lot, you did well too 👍
+
+
+[05/29/2024 19:33] alix40
+When top 2 together are struggling to get 10% of the pot U know it's tough over here 😂
+
+{Reactions}
+🚀 (4) 
+
+[05/29/2024 19:40] alix40
+At least no one got 1 cent. So let's stay positive
+
+
+[05/29/2024 19:41] dimulski
+hahah just 2 cents 😄
+
+{Reactions}
+😂 (2) 
+
+[05/29/2024 19:41] dimulski
+nobody from the c4 team online to tag, to see if those results are final so strange, is this due to the new rules that are being implemented
+
+{Reactions}
+c4blocked 
+
+[05/29/2024 19:42] al_qa_qa
+There are 180 participant in the results page. I feel sorry for the one who will announce the result via Discord.
+
+{Reactions}
+4739_Skeletor (10) 😬 😅 
+
+[05/29/2024 19:54] 0xauditism
+Thanks to the judge @Koolex , this was pure madness
+
+
+[05/29/2024 19:59] thefabled8702
+Sweet, my first audit and I made the top ten. That was fun.
+
+{Reactions}
+🚀 (8) 
+
+[05/29/2024 20:00] itsabinashb
+Where is the result?
+
+
+[05/29/2024 20:15] gumgumzum
+Impressive, congratulations 🎉🔥
+
+{Reactions}
+🙏 
+
+[05/29/2024 20:17] itsabinashb
+How did u know that?
+
+
+[05/29/2024 20:18] yasminee.
+https://code4rena.com/audits/2024-04-dyad
+
+{Embed}
+https://code4rena.com/audits/2024-04-dyad
+DYAD | Code4rena
+$36,500 in USDC
+18 April 8:00 PM—25 April 8:00 PM
+Code4rena - ARCHIVE-Q2-2024 - dyad-apr18 [1229440078280130634].txt_Files/c4-og-v2-0F6D6.png
+
+
+[05/29/2024 20:23] ljj
+$700 is way more than what I expected from this competition ngl
+
+
+[05/29/2024 20:31] bbl4de.xyz
+Same, 7$ is way more than I expected
+
+
+[05/29/2024 20:56] ljj
+Anyways this protocol will definitely need another audit 😂
+
+
+[05/29/2024 21:00] haxatron1
+From a legion of average auditors or a few genius auditors this time?
+
+{Reactions}
+😂 (3) 
+
+[05/29/2024 21:03] ljj
+Ahahah not sure about that but hopefully next time it will be done on a close to finished codebase. Feel like this audit was kind of used to get auditors to write their code as recommendation
+
+
+[05/29/2024 21:23] thebrittfactor
+Just to note, PJ QA is closed and we're working through getting awards ready to announce. We appreciate your patience! :hi5:
+
+
+[05/29/2024 21:24] gumgumzum
+Wait, the website ones are not final? I already spent that money
+
+
+[05/29/2024 21:24] gumgumzum
+Jk jk 😂
+
+
+[05/29/2024 22:30] irreverent.eth
+wow there are 0 solo findings for the entire contest
+
+
+[05/29/2024 22:36] irreverent.eth
+80 people got < $10
+
+
+[05/29/2024 22:37] irreverent.eth
+QA got 50 bucks
+
+
+[05/29/2024 22:40] poeaudits
+At least I can finally get backstage access. Accomplished my goal for this contest.
+
+
+[05/29/2024 23:02] irreverent.eth
+Getting 4 highs and 8 bucks is just wrong…
+
+{Reactions}
+🤣 (2) 
+
+[05/29/2024 23:29] tamayonft
+It's no wrong bro
+
+
+[05/30/2024 02:14] tigerfrake
+Seen worse, lol
+
+{Reactions}
+😂 
+
+[05/30/2024 02:43] thebrittfactor
+🤑 🎉  Awards for **DYAD**:
+
+$1,566.97 USDC » @carrotsmuggler 
+$1,417.45 USDC » @Alix40 
+$978.02 USDC » @Emmanuel 
+$933.50 USDC » @Al-Qa-qa 
+$814.81 USDC » @ZanyBonzy 
+$766.32 USDC » @adam-idarrha 
+$763.90 USDC » @TheSavageTeddy 
+$761.34 USDC » lian886  
+$750.34 USDC » @The Fabled 
+$732.91 USDC » SBSecurity (@blckhv and @Slavcheww) 
+$703.53 USDC » @ljj 
+$683.27 USDC » @dimulski 
+$677.94 USDC » @auditism 
+$666.09 USDC » @Bauchibred 
+$585.69 USDC » @T1MOH 
+$529.70 USDC » @MrPotatoMagic 
+$513.94 USDC » @Jorgect 
+$501.93 USDC » @evokid 
+$500.57 USDC » @Maroutis 
+$485.94 USDC » Egis_Security (@nmirchev8 and @deth) 
+$485.13 USDC » @SpicyMeatball 
+$464.93 USDC » @zhaojohnson 
+$463.51 USDC » @ArmedGoose 
+$462.67 USDC » Circolors (@irreverent and @McToady) 
+$460.80 USDC » @eta 
+$446.95 USDC » @peanuts 
+$408.38 USDC » @shikhar229169 
+$405.81 USDC » Strausses
+$395.75 USDC » @infect3d 
+$381.21 USDC » @d3e4 
+$352.05 USDC » @ke1caM 
+$349.78 USDC » @Limbooo 
+$332.08 USDC » @KupiaSec 
+$331.13 USDC » @0xtankr 
+$327.21 USDC » @Honour 
+$327.21 USDC » @kennedy1030 
+$323.26 USDC » @0x486776 
+$319.60 USDC » @0xfox 
+$298.21 USDC » @ethan 
+$295.78 USDC » @0xSecuri 
+$291.13 USDC » @Pataroff 
+$283.37 USDC » @Sancybars 
+$283.37 USDC » @Stormreckson⛈ 
+$282.09 USDC » @TheSchnilch 
+$270.44 USDC » @favelanky 
+$264.20 USDC » 0xleadwizard  
+$259.08 USDC » @pontifex 
+$255.32 USDC » @HChang26
+
+{Reactions}
+🔥 (7) 
+
+[05/30/2024 02:44] thebrittfactor
+$247.60 USDC » @AlexCzm 
+$243.18 USDC » AM (@SA and @0xmatei) 
+$241.85 USDC » @ahmedaghadi 
+$238.03 USDC » MiniGlome  
+$236.12 USDC » @Stefanov 
+$224.23 USDC » @carlitox477 
+$223.00 USDC » @OMEN 
+$208.19 USDC » KYP (@yotov721 and @givn) 
+$205.73 USDC » @Sabit 
+$204.68 USDC » @NentoR 
+$200.84 USDC » @Shubham 
+$196.82 USDC » @VAD37 
+$154.86 USDC » @baf 
+$129.79 USDC » AamirMK  
+$126.55 USDC » @gumgumzum 
+$123.14 USDC » @0xabhay 
+$90.96 USDC » @oakcobalt 
+$86.30 USDC » 0xAlix2 (@a_kalout and @ali_shehab) 
+$68.52 USDC » @grearlake 
+$63.00 USDC » @Abdessamed 
+$52.41 USDC » @Aamir 
+$51.94 USDC » @0xnev 
+$50.72 USDC » @K42 Ψ 
+$50.72 USDC » @Sathish9098 
+$50.72 USDC » @Albahaca 
+$50.72 USDC » clara  
+$50.72 USDC » @niloy 
+$50.72 USDC » @sxima 
+$45.13 USDC » @0xlemon 
+$41.39 USDC » @bhilare_ 
+$40.02 USDC » @3DOC 
+$39.74 USDC » koo  
+$37.39 USDC » @iamandreiski 
+$37.31 USDC » @forgebyola 
+$37.28 USDC » @Dudex 
+$32.70 USDC » @petro_1912 
+$26.04 USDC » @sashik_eth 
+$24.59 USDC » @Myrault 
+$24.59 USDC » miaowu  
+$24.59 USDC » @vahdrak1 
+$22.19 USDC » @Alex The Entreprenerd 
+$22.16 USDC » @atoko 
+$22.16 USDC » @jesjupyter 
+$21.40 USDC » @0xnilay 
+$18.50 USDC » @0x175 
+$17.29 USDC » @Bigsam 
+$16.54 USDC » @itsabinashb 
+$14.85 USDC » @ducanh2706 
+$13.59 USDC » @Ryonen 
+$12.82 USDC » @web3km
+
+{Reactions}
+🚀 
+
+[05/30/2024 02:44] thebrittfactor
+$11.67 USDC » @btk 
+$11.39 USDC » @steadyman 
+$11.33 USDC » @0xCinghiale 
+$9.74 USDC » @darksnow 
+$8.69 USDC » DarkTower (@0xrex, @haxatron and @EV_om) 
+$8.69 USDC » @amaron 
+$8.69 USDC » @cu5t0mpeo 
+$8.69 USDC » @windhustler 
+$8.59 USDC » @zhuying 
+$7.95 USDC » @shaflow2 
+$7.83 USDC » @n4nika 
+$7.66 USDC » @PoeAudits 
+$7.66 USDC » @josephdara 
+$7.63 USDC » @n0kto 
+$7.54 USDC » @Mahmud 
+$7.54 USDC » @bbl4de 
+$7.37 USDC » @BiasedMerc 
+$7.37 USDC » @d_tony7470 
+$7.37 USDC » @turvy_fuzz 
+$7.35 USDC » @CaeraDenoir 
+$7.35 USDC » @SovaSlava 
+$7.35 USDC » @okolicodes 
+$7.35 USDC » @Knarf 
+$7.33 USDC » @Angry_Mustache_Man 
+$7.33 USDC » DedOhWale  
+$7.33 USDC » Vasquez  
+$4.90 USDC » @0xblack_bird 
+$4.90 USDC » @Cryptor 
+$4.90 USDC » @WildSniper 
+$4.87 USDC » @AvantGard 
+$4.87 USDC » @Ocean_Sky 
+$4.87 USDC » @Tigerfrake 
+$4.87 USDC » @fandonov 
+$4.87 USDC » @foxb868 
+$4.87 USDC » @igdbase 
+$4.87 USDC » @nnez 
+$4.87 USDC » @wangxx2026 
+$4.87 USDC » @xiao 
+$4.13 USDC » @Krace 
+$4.11 USDC » @0xShitgem 
+$4.11 USDC » CodeWasp (@kuprum, @slylandro_star and @audithare) 
+$4.11 USDC » @ktl 
+$4.00 USDC » Hueber  
+$3.85 USDC » @4rdiii 
+$3.85 USDC » @dinkras 
+$3.85 USDC » @imare 
+$3.85 USDC » @y4y 
+$3.82 USDC » @0xlucky45 
+$3.82 USDC » @Josh4324 
+$3.82 USDC » @XDZIBECX 
+$3.74 USDC » @Tychai0s 
+$3.72 USDC » @tchkvsky
+
+
+[05/30/2024 02:45] thebrittfactor
+$0.31 USDC » poslednaya  
+$0.31 USDC » @Zigtur 
+$0.28 USDC » @Daniel526 
+$0.28 USDC » @LeoGold 
+$0.28 USDC » The-Seraphs (@pxng0lin and @solsaver) 
+$0.28 USDC » @Topmark 
+$0.28 USDC » @neo.crao 
+$0.28 USDC » @ych18 
+$0.02 USDC » @0x77 
+$0.02 USDC » @0xAkira 
+$0.02 USDC » @0xAsen 
+$0.02 USDC » @0xDemon 
+$0.02 USDC » @0xloscar01 
+$0.02 USDC » @DMoore 
+$0.02 USDC » DPS (@0xJaeger and @yvuchev) 
+$0.02 USDC » @Dinesh11G 
+$0.02 USDC » @Dots 
+$0.02 USDC » Imp  
+$0.02 USDC » @Mrxstrange 
+$0.02 USDC » Pechenite (@bozho and @radev_sw) 
+$0.02 USDC » @asui 
+$0.02 USDC » @blutorque 
+$0.02 USDC » @c0pp3rscr3w3r 
+$0.02 USDC » @caglankaan 
+$0.02 USDC » @djxploit 
+$0.02 USDC » @kartik_giri_47538 
+$0.02 USDC » lionking927  
+$0.02 USDC » @NiSeR 
+$0.02 USDC » @pep7siup 
+$0.02 USDC » @ptsanev 
+$0.02 USDC » @unknown-BL4NK 
+$0.02 USDC » @valentin_s2304 
+$0.02 USDC » @xyz
+
+🏁 Findings summary
+-------------------------------------
+High risk findings: 10 unique (360 total)
+Med risk findings: 9 unique (191 total)
+QA reports: 12 (Best: Bauchibred)
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+
+[05/30/2024 02:48] mctoady
+Congrats to the legion 🫡
+
+{Reactions}
+🫡 (14) 
+
+[05/30/2024 03:47] lian0669
+Congratulations all!
+
+
+[05/30/2024 04:27] 0xfox_
+Congrats to everyone
+
+
+[05/30/2024 04:33] 0xfox_
+To all my average auditors 🍻
+
+{Reactions}
+🥂 (17) 
+
+[05/30/2024 05:18] skodinger
+oh wow that's huge number of participants a lot of people are joining web3 sec i guess
+
+
+[05/30/2024 05:33] ehjc
+Congrats 🎉
+
+
+[05/30/2024 06:19] xkeywordx
+Guys, where can I see the report with all the final, valid findings?
+
+
+[05/30/2024 06:56] 0xarmedgoose
+report usually comes a bit later than the results. you need to wait few days at least
+
+
+[05/30/2024 07:51] infectedfuture
+congrats everyone, this was a very stack contest!
+
+
+[05/30/2024 07:54] infectedfuture
+and we were all joking like "gib me my 1ct" while in fact this was a whoping 2 whole cents 💯
+
+{Reactions}
+😂 (5) 
+
+[05/30/2024 08:22] _3doc_
+Hats off frérot, you got 10x my payout, I'm SO jealous 😂
+
+{Reactions}
+❤️ (2) 😂 
+
+[05/30/2024 08:27] ivanfitro
+Can I see in any place why my submission is invalid?
+
+{Reactions}
+➕ 
+
+[05/30/2024 08:37] honour_d_dev
+has backstage role been removed?
+
+
+[05/30/2024 08:38] honour_d_dev
+or changed?
+
+
+[05/30/2024 08:42] mctoady
+It's called SR now
+
+
+[05/30/2024 08:49] daniel526
+Ok, 0.28 bucks for a high, I hope my landlord understands me for the second time!
+
+{Reactions}
+😂 (17) 
+
+[05/30/2024 08:53] honour_d_dev
+oh okay... what's the requirements please cos I think I should have it by now
+
+
+[05/30/2024 09:00] aripse
+All information is in the Code4rena documentation.
+
+{Reactions}
+c4services 
+
+[05/30/2024 09:28] honour_d_dev
+OK thanks
+
+
+[05/30/2024 09:32] brivan
+5 Highs, 2 med worth $60, LOL. 
+Congrats everyone
+
+{Reactions}
+💜 (7) 
+
+[05/30/2024 10:05] hunter0x01
+Congrats bro @Al-Qa-qa
+
+
+[05/30/2024 12:17] al_qa_qa
+Thanks a lot brother 👍
+
+
+[05/30/2024 17:27] sabit97
+@Al-Qa-qa needs to give me his top 5 finish secrets in contests.
+
+{Reactions}
+😂 (3) 
+
+[05/30/2024 18:44] sabit97
+And also @carrotsmuggler
+
+
+[05/31/2024 08:42] 0xarav
+When can we expect the report released ?
+
+
+[06/03/2024 08:31] iwildsniperi
+According to sponser
+
+{Reactions}
+👍 
+
+[06/03/2024 08:31] iwildsniperi
+Cause there was v1 on-chain and he may want to delay the report if sees any risk
+
+
+[06/04/2024 16:39] shafu0x
+Dm me
+
+
+[06/04/2024 17:46] petro_1912
+Started a thread.
+
+
+[06/05/2024 20:05] lionking927
+Thanks for giving my 0.02$
+
+
+[06/06/2024 09:45] smart_27
+Also I will give you my salary == 0.02$.
+
+
+[06/07/2024 01:10] itsmetechjay
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted on Friday, 14 June 2024.  Please make sure to grab anything you might need before then.
+
+
+[06/10/2024 20:53] paprikrumplikas
+Where can I see the final report?
+
+
+[06/10/2024 20:58] yasminee.
+Not out yet 😕
+
+{Reactions}
+👍 
+
+[06/14/2024 14:38] itsmetechjay
+ℹ️ Reminder: this channel will be deleted in 24 hours.
+
+
+==============================================================
+Exported 1,102 message(s)
+==============================================================
